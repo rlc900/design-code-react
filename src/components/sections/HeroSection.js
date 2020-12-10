@@ -1,16 +1,16 @@
 import React from 'react';
-// import {Link} from 'gatsby';
 import styled from 'styled-components';
+import { H1, MediumText } from '../styles/TextStyles';
 
 function HeroSection() {
     return (
       <Wrapper>
         <ContentWrapper>
           <TextWrapper>
-      <Title>Design <br /> and code React apps</Title>
-      <Description>Welcome to your new Gatsby site.</Description>
-      </TextWrapper>
-      </ContentWrapper>
+            <Title>Design <br /> and code React apps</Title>
+             <Description>Welcome to your new Gatsby site.</Description>
+          </TextWrapper>
+        </ContentWrapper>
       </Wrapper>
     )
 }
@@ -30,11 +30,10 @@ const TextWrapper = styled.div`
   display: grid;
   gap: 30px;
 `
-const Title = styled.h1`
-  font-weight: bold;
-  font-size: 60px;
+const Title = styled(H1)`
+  color: white;
 `
-const Description = styled.p`
+const Description = styled(MediumText)`
   font-size: 17px;
   line-height: 
 `
