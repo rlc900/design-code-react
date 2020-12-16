@@ -24,12 +24,18 @@ export default HeroSection;
 
 const Wrapper = styled.div`
   background: linear-gradient(180deg, #4316DB 0%, #9076E7 100%);
-  overflow: hidden;
+  /* position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10; */
+  /* overflow: hidden; */
 `
 const ContentWrapper = styled.div`
 	max-width: 1234px;
-	padding: 200px 30px;
   margin: 0 auto;
+	padding: 200px 30px;
   display: grid;
   grid-template-columns: 360px auto;
 `
