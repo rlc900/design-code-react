@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import MockUpAnimation from '../animations/MockupAnimation';
 import PurchaseButton from '../buttons/PurchaseButton';
 import { themes } from '../styles/ColorStyles';
 import { H1, MediumText } from '../styles/TextStyles';
@@ -9,10 +10,11 @@ function HeroSection() {
       <Wrapper>
         <ContentWrapper>
           <TextWrapper>
-            <Title>Design <br /> and code React apps</Title>
-             <Description>Welcome to your new Gatsby site.</Description>
+            <Title>Riannas <br /> Portfolio</Title>
+             <Description>i'm a weeb</Description>
              <PurchaseButton title="Start Learning" subtitle="120+ hours of video"/>
           </TextWrapper>
+          <MockUpAnimation/>
         </ContentWrapper>
       </Wrapper>
     )
@@ -22,11 +24,14 @@ export default HeroSection;
 
 const Wrapper = styled.div`
   background: linear-gradient(180deg, #4316DB 0%, #9076E7 100%);
+  overflow: hidden;
 `
 const ContentWrapper = styled.div`
 	max-width: 1234px;
 	padding: 200px 30px;
-	margin: 0 auto;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 360px auto;
 `
 const TextWrapper = styled.div`
   max-width: 360px;
