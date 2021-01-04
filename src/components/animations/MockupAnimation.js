@@ -18,7 +18,7 @@ const Wrapper = styled.div`
     /* perspective-origin: top left; */
 
     div {
-        transform: rotateY(-20deg) rotateX(-20deg); 
+        transform: rotateY(0deg) rotateX(5deg); 
         transform-origin: bottom left;
     }
 
