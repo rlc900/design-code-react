@@ -3,18 +3,22 @@ import React from 'react'
 import styled from 'styled-components'
 import {menuData} from '../../data/MenuData'
 import MenuButton from '../buttons/MenuButton';
+import MenuToolTip from '../tooltips/MenuToolTip';
 
 export default function Header() {
     return (
         <Wrapper>
             <Link to="/">
-            <img src='/images/logos/logo.svg'/>
+            <img src='/images/logos/logo.svg' alt={'logo'}/>
             </Link>
             <MenuWrapper count={menuData.length}>
         {menuData.map((item, index) => (
             <MenuButton item={item} key={index}/>
         ))}
          </MenuWrapper>
+         <MenuToolTip>
+             
+         </MenuToolTip>
         </Wrapper>
     )
 }
