@@ -7,6 +7,12 @@ import MenuToolTip from '../tooltips/MenuToolTip';
 
 export default function Header() {
 const [isOpen, setIsOpen] = useState(false)
+
+function handleClick(event) {
+    event.preventDefault()
+    setIsOpen(!isOpen)
+    // console.log("im clicked!")
+}
     return (
         <Wrapper >
             <Link to="/">
@@ -15,7 +21,7 @@ const [isOpen, setIsOpen] = useState(false)
             <MenuWrapper count={menuData.length}>
                 {menuData.map((item, index) => 
                 item.link === "/account" ? (
-                <MenuButton item={item} key={index} onClick={() => setIsOpen(!isOpen)}/>
+                <MenuButton item={item} key={index} onClick={event => handleClick(event)}/>
                 ) : (
             <MenuButton item={item} key={index}/>
         ))}
