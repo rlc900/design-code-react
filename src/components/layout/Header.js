@@ -1,24 +1,27 @@
 import { Link } from 'gatsby';
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import {menuData} from '../../data/MenuData'
 import MenuButton from '../buttons/MenuButton';
 import MenuToolTip from '../tooltips/MenuToolTip';
 
 export default function Header() {
+const [isOpen, setIsOpen] = useState(false)
     return (
-        <Wrapper>
+        <Wrapper >
             <Link to="/">
             <img src='/images/logos/logo.svg' alt={'logo'}/>
             </Link>
             <MenuWrapper count={menuData.length}>
-        {menuData.map((item, index) => (
+                {menuData.map((item, index) => 
+                item.link === "/account" ? (
+                <MenuButton item={item} key={index} onClick={() => setIsOpen(!isOpen)}/>
+                ) : (
             <MenuButton item={item} key={index}/>
         ))}
          </MenuWrapper>
-         <MenuToolTip>
              
-         </MenuToolTip>
+         <MenuToolTip isOpen={isOpen}/>
         </Wrapper>
     )
 }

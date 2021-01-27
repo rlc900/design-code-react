@@ -20,6 +20,11 @@ export const menuData = [
         title: "", 
         icon: "/images/icons/search.svg", 
         link: "/search"
+    },
+    {
+        title: "", 
+        icon: "/images/icons/account.svg", 
+        link: "/account"
     }
     ];
 
