@@ -10,7 +10,7 @@ export default function MenuToolTip (props) {
     return (
     <Wrapper isOpen={isOpen} >
         {tooltipData.map((item, index) => (
-        <MenuButton item={item}/>
+        <MenuButton item={item} key={index}/>
     ))}
     </Wrapper>
   )
