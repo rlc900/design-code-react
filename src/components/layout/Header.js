@@ -59,7 +59,7 @@ const MenuWrapper = styled.div`
     grid-template-columns: repeat(${props => props.count}, auto);
 
     @media (max-width: 768px) {
-        > a {
+      > a {
         display: none;
       }
       grid-template-columns: auto;

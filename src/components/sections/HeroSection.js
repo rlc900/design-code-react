@@ -39,7 +39,7 @@ const ContentWrapper = styled.div`
   display: grid;
   grid-template-columns: 360px auto;
 
-  @media(max-width: 450px) {
+  @media (max-width: 450px) {
     grid-template-columns: auto;
     gap: 60px;
     padding: 150px 20px 250px;
@@ -78,6 +78,10 @@ const Title = styled(H1)`
 	-webkit-background-clip: text;
 	color: transparent;
   }
+
+  @media (max-width: 450px) {
+        font-size: 48px;
+    }
 `
 const Description = styled(MediumText)`
   /* font-size: 17px;

@@ -15,11 +15,17 @@ export default function MockUpAnimation() {
 const Wrapper = styled.div`
     position: relative;
     perspective: 5000;
-    /* perspective-origin: top left; */
+  
 
+        /* these queries are not working */
+        /* ipad */
     @media (max-width: 768px) {
         transform: scale(0.6);
         transform-origin: top left;
+    }
+/* iphone */
+    @media (max-width: 450px) {
+        transform: scale(0.4);
     }
 
     div {
@@ -30,6 +36,7 @@ const Wrapper = styled.div`
     * {
         transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
+    
 
     :hover div {
         transform: rotateY(0deg) rotateX(0deg);
