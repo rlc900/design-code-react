@@ -1,12 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
+// import {Link} from 'react-router-dom'
 
 export default function MockUpAnimation() {
+console.log(window)
     return (
     <Wrapper>
         <div className="mockup1" />
         <div className="mockup2" />
-        <div className="mockup3" />
+        <div className="mockup3" 
+        onClick={() => (window.location = "https://github.com/rlc900")}
+        onKeyDown={() => (window.location = "https://github.com/rlc900")}  
+        role="link"  
+        aria-label="Click to see my Github Repos!"
+        />
         <div className="mockup4" />
         <div className="mockup5" />
     </Wrapper>
