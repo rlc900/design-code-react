@@ -4,22 +4,31 @@ import {Link} from 'gatsby'
 import { Caption2, SmallText } from '../styles/TextStyles'
 
 export default function PurchaseButton(props) {
+    // return null
     const {title, subtitle} = props
     return (
-        <Link to="/page-2">
+     
         <Wrapper>
-            <IconWrapper>
-                <Icon src="/images/icons/credit.svg" className='icon'/>
-                <Ring src="/images/icons/icon-ring.svg"/>
-            </IconWrapper>
-            <TextWrapper>
-                <Title>{title || "Get Pro Access"}</Title>
-                <Subtitle>{subtitle || "$19 per month"}</Subtitle>
-            </TextWrapper>
+            
         </Wrapper>
-        </Link>
+
     )
 }
+
+// return (
+//     <Link to="/page-2">
+//     <Wrapper>
+//         <IconWrapper>
+//             <Icon src="/images/icons/credit.svg" className='icon'/>
+//             <Ring src="/images/icons/icon-ring.svg"/>
+//         </IconWrapper>
+//         <TextWrapper>
+//             <Title>{title || "Get Pro Access"}</Title>
+//             <Subtitle>{subtitle || "$19 per month"}</Subtitle>
+//         </TextWrapper>
+//     </Wrapper>
+//     </Link>
+// )
 
 const Wrapper = styled.div`
     max-width: 280px;

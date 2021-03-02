@@ -33,6 +33,7 @@ const Wrapper = styled.div`
   overflow: hidden;
 `
 const ContentWrapper = styled.div`
+  height: 100vh;
 	max-width: 1234px;
   margin: 0 auto;
 	padding: 200px 30px;
