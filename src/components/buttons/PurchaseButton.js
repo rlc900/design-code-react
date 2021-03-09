@@ -4,18 +4,10 @@ import {Link} from 'gatsby'
 import { Caption2, SmallText } from '../styles/TextStyles'
 
 export default function PurchaseButton(props) {
-    // return null
-    const {title, subtitle} = props
-    return (
-     
-        <Wrapper>
-            
-        </Wrapper>
 
-    )
-}
-
-// return (
+    // const {title, subtitle} = props
+    return null
+    // return (
 //     <Link to="/page-2">
 //     <Wrapper>
 //         <IconWrapper>
@@ -29,6 +21,10 @@ export default function PurchaseButton(props) {
 //     </Wrapper>
 //     </Link>
 // )
+
+}
+
+
 
 const Wrapper = styled.div`
     max-width: 280px;

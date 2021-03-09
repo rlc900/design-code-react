@@ -4,7 +4,7 @@ import MockUpAnimation from '../animations/MockupAnimation';
 import WaveBackground from '../backgrounds/WaveBackground';
 import PurchaseButton from '../buttons/PurchaseButton';
 import { themes } from '../styles/ColorStyles';
-import { H1, MediumText } from '../styles/TextStyles';
+import { H1, P } from '../styles/TextStyles';
 
 function HeroSection() {
     return (
@@ -12,7 +12,7 @@ function HeroSection() {
         <WaveBackground/>
         <ContentWrapper>
           <TextWrapper>
-            <Title>Riannas <br /> <span>Portfolio</span></Title>
+            <Title>Rianna Cleary<br /> <span>Full Stack Developer</span></Title>
              <Description>weeb</Description>
              <PurchaseButton title="Start Learning" subtitle="120+ hours of video"/>
           </TextWrapper>
@@ -84,7 +84,12 @@ const Title = styled(H1)`
         font-size: 48px;
     }
 `
-const Description = styled(MediumText)`
-  /* font-size: 17px;
-  line-height:  */
+
+const Description = styled(P)`
+  background: linear-gradient(180deg, #730040 0%, #301cbe 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  position: relative;
+  bottom: 80px;
 `

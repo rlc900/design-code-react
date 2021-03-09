@@ -6,34 +6,34 @@ import MenuButton from '../buttons/MenuButton';
 import MenuToolTip from '../tooltips/MenuToolTip';
 
 export default function Header() {
-    return null
-// const [isOpen, setIsOpen] = useState(false)
+    // return null
+const [isOpen, setIsOpen] = useState(false)
 
-// function handleClick(event) {
-//     event.preventDefault()
-//     setIsOpen(!isOpen)
-//     // console.log("im clicked!")
-// }
-//     return (
-//         <Wrapper >
-//             <Link to="/">
-//             <img src='/images/logos/logo.svg' alt={'logo'}/>
-//             </Link>
-//             <MenuWrapper count={menuData.length}>
-//                 {menuData.map((item, index) => 
-//                 item.link === "/account" ? (
-//                 <MenuButton item={item} key={index} onClick={event => handleClick(event)}/>
-//                 ) : (
-//             <MenuButton item={item} key={index}/>
-//         ))}
-//         <HamburgerWrapper>
-//             <MenuButton item={{title: "", icon: "/images/icons/hamburger.svg", link: ""}}/>
-//         </HamburgerWrapper>
-//          </MenuWrapper>
+function handleClick(event) {
+    event.preventDefault()
+    setIsOpen(!isOpen)
+    // console.log("im clicked!")
+}
+    return (
+        <Wrapper >
+            <Link to="/">
+            <img src='/images/logos/logo.svg' alt={'logo'}/>
+            </Link>
+            <MenuWrapper count={menuData.length}>
+                {menuData.map((item, index) => 
+                item.link === "/account" ? (
+                <MenuButton item={item} key={index} onClick={event => handleClick(event)}/>
+                ) : (
+            <MenuButton item={item} key={index}/>
+        ))}
+        <HamburgerWrapper>
+            <MenuButton item={{title: "", icon: "/images/icons/hamburger.svg", link: ""}}/>
+        </HamburgerWrapper>
+         </MenuWrapper>
              
-//          <MenuToolTip isOpen={isOpen}/>
-//         </Wrapper>
-//     )
+         <MenuToolTip isOpen={isOpen}/>
+        </Wrapper>
+    )
 }
 
 const Wrapper = styled.div`

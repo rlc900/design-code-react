@@ -28,6 +28,14 @@ export const H3 = styled.h3`
     }
 `
 
+export const P = styled.p`
+  font-weight: bold;
+  font-size: 26px;
+  /* @media (max-width: 450px) {
+      font-size: 24px;
+    } */
+`
+
 export const BodyIntro = styled.p`
   font-weight: 500;
   font-size: 24px;
