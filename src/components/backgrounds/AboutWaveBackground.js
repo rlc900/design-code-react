@@ -5,14 +5,14 @@ export default function AboutWaveBackground() {
     return (
     
     <Wrapper>
-        <Background />
-        {/* <CourseCard src="/images/design/course-card.svg"/> */}
-        <FirstWave src="/images/waves/courses-wave1.svg" 
-        style={{top: "100px"}}
+        <Background src='/images/animations/about/background.svg'/>
+        <FirstWave 
+        src="/images/animations/about/wave1.svg" 
+       
         />
-        <SecondWave src="/images/waves/courses-wave2.svg" />
-        <ThirdWave src="/images/waves/courses-wave3.svg" />
-        <FourthWave src="/images/waves/footer-wave2.svg" />
+        <SecondWave src="/images/animations/about/wave2.svg" />
+        {/* <ThirdWave src="/images/waves/courses-wave3.svg" /> */}
+        <FourthWave src="/images/animations/about/wave3.svg" />
     </Wrapper>
     )
 }
@@ -23,44 +23,52 @@ const Wrapper = styled.div`
 
 `
 const FirstWave = styled.img`
+/* 
     position: absolute;
     z-index: -1;
 
     @media (min-width: 1440px) {
         width: 100%;
-    }
+    } */
+    position: absolute;
+    width: 2269.05px;
+    height: 487.76px;
+    left: -190.69px;
+    /* top: 137.24px; */
+/* bottom: 100px; */
+
+/* background: linear-gradient(180deg, #FF6869 -19.02%, #FF927A 33.27%, rgba(255, 95, 143, 0) 88.93%); */
+/* filter: blur(250px); */
 `
 
 const SecondWave = styled.img`
     position: absolute;
-    z-index: -1;
+    width: 1576.19px;
+    height: 323.63px;
+/* left: calc(50% - 1576.19px/2 + 1590.52px); */
+    top: 415.18px;
 
-    @media (min-width: 1440px) {
-        width: 100%;
-    }
-`
-const ThirdWave = styled.img`
+/* background: linear-gradient(148.19deg, rgba(97, 210, 204, 0.6) -2.66%, rgba(255, 255, 255, 0) 57.3%); */
+/* backdrop-filter: blur(54.9462px); */
+/* Note: backdrop-filter has minimal browser support */
 
-    position: relative;
-    top: 120px;
-
+/* transform: matrix(-1, 0, 0, 1, 0, 0); */
 `
 
 const FourthWave = styled.img`
-    position: relative;
-    bottom: 260px;
+    position: absolute;
+    top: 500px;
+    left: 10px;
+ 
 `
 
-const CourseCard = styled.img`
-
-`
-
-const Background = styled.div`
-    background: linear-gradient(180deg, #4316DB 0%, #9076E7 100%);
+const Background = styled.img`
+ /* background: linear-gradient(180deg, #4316DB 0%, #9076E7 100%); */
     position: absolute;
     width: 100%;
-    height: 800px;
-    z-index: -1;
+    /* height: 800px; */
+    z-index: -1; 
+
 `
 const BottomWave = styled.img`
     @media (prefers-color-scheme: dark) {
