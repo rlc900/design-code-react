@@ -33,3 +33,6 @@ export const menuData = [
         { title: "Settings", icon: "/images/icons/settings.svg", link: "/settings" },
         { title: "Sign out", icon: "/images/icons/signout.svg", link: "/logout" },
       ]
+    export const techIcons = [
+        {icon: "images/icons/github-logo.png"}
+    ]

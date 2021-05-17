@@ -1,10 +1,13 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
+// import {ReacComponent as GithubLogo} from '../../../static/images/icons/github-logo.png';
+import {menuData} from '../../data/MenuData'
 import MockUpAnimation from '../animations/MockupAnimation';
 import WaveBackground from '../backgrounds/WaveBackground';
 import PurchaseButton from '../buttons/PurchaseButton';
 import { themes } from '../styles/ColorStyles';
 import { H1, P } from '../styles/TextStyles';
+
 
 function HeroSection() {
     return (
@@ -14,6 +17,7 @@ function HeroSection() {
           <TextWrapper>
             <Title>Rianna Cleary<br /> <span>Full Stack Developer</span></Title>
              <Description>weeb</Description>
+             <GithubIcon/>
              <PurchaseButton title="Start Learning" subtitle="120+ hours of video"/>
           </TextWrapper>
           <MockUpAnimation/>
@@ -92,4 +96,7 @@ const Description = styled(P)`
   color: transparent;
   position: relative;
   bottom: 80px;
+`
+const GithubIcon = styled.img`
+
 `

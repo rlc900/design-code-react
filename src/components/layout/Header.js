@@ -12,7 +12,7 @@ const [isOpen, setIsOpen] = useState(false)
 function handleClick(event) {
     event.preventDefault()
     setIsOpen(!isOpen)
-    // console.log("im clicked!")
+    console.log("im clicked!")
 }
     return (
         <Wrapper >
