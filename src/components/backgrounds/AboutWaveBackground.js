@@ -19,8 +19,9 @@ const Wrapper = styled.div`
     position: relative;
 `
 const Title = styled(H1)`
-color: ${themes.dark.text1};
-  background: linear-gradient(180deg, #730040 0%, #301cbe 100%);
+  color: ${themes.dark.text1};
+  /* background: linear-gradient(180deg, #730040 0%, #301cbe 100%); */
+  background: white;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -37,7 +38,8 @@ color: ${themes.dark.text1};
     }
 `
 const Description = styled(P)`
-   background: linear-gradient(180deg, #730040 0%, #301cbe 100%);
+   /* background: linear-gradient(180deg, #730040 0%, #301cbe 100%); */
+   background: white;
    background-clip: text;
    -webkit-background-clip: text;
    color: transparent;
