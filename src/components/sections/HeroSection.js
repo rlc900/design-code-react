@@ -16,9 +16,8 @@ function HeroSection() {
         <ContentWrapper>
           <TextWrapper>
             <Title>Rianna Cleary<br /> <span>Full Stack Developer</span></Title>
-             <Description>weeb</Description>
+             <Description></Description>
              <GithubIcon/>
-             <PurchaseButton title="Start Learning" subtitle="120+ hours of video"/>
           </TextWrapper>
           <MockUpAnimation/>
         </ContentWrapper>
