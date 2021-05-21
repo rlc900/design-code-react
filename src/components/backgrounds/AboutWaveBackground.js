@@ -55,6 +55,7 @@ const Title = styled(H1)`
 	color: transparent;
   }
 
+  /* for accessibility */
   @media (max-width: 450px) {
         font-size: 48px;
     }
@@ -75,6 +76,7 @@ const Description = styled(P)`
 	color: transparent;
   }
 
+/* for accessibility */
    @media (max-width: 450px) { 
         font-size: 48px;
     } 
