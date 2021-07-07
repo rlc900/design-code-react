@@ -15,23 +15,12 @@ function handleClick(event) {
     console.log("im clicked!")
 }
     return (
-        <Wrapper >
+        <Wrapper>
             <Link to="/">
-            <img src='/images/logos/logo.svg' alt={'logo'}/>
+            <img src='/images/logos/home-icon.svg' alt={'logo'}/>
             </Link>
-            <MenuWrapper count={menuData.length}>
-                {menuData.map((item, index) => 
-                item.link === "/account" ? (
-                <MenuButton item={item} key={index} onClick={event => handleClick(event)}/>
-                ) : (
-            <MenuButton item={item} key={index}/>
-        ))}
-        <HamburgerWrapper>
-            <MenuButton item={{title: "", icon: "/images/icons/hamburger.svg", link: ""}}/>
-        </HamburgerWrapper>
-         </MenuWrapper>
-             
-         <MenuToolTip isOpen={isOpen}/>
+            <MenuWrapper count={menuData.length}/>
+                {menuData.map((item, index) => <MenuButton item={item} key={index}/>)}
         </Wrapper>
     )
 }

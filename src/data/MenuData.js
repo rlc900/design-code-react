@@ -15,16 +15,6 @@ export const menuData = [
         title: "Contact Info", 
         icon: "/images/icons/pricing.svg", 
         link: "/pricing"
-    },
-    {
-        title: "", 
-        icon: "/images/icons/search.svg", 
-        link: "/search"
-    },
-    {
-        title: "", 
-        icon: "/images/icons/account.svg", 
-        link: "/account"
     }
     ];
 

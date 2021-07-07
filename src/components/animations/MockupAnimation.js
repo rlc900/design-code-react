@@ -27,8 +27,7 @@ console.log(window)
         role="link"  
         aria-label="Click to see my Github Repos!"
         />
-        <div className="mockup4" />
-        <div className="mockup5" />
+        
     </Wrapper>
 )}
 
@@ -179,3 +178,6 @@ const Wrapper = styled.div`
 
     }
 `
+//Add these when more projects are added!
+// <div className="mockup4" />
+// <div className="mockup5" /> 
