@@ -8,15 +8,15 @@ export const menuData = [
     {
         title: "Projects", 
         icon: "/images/icons/tutorials.svg", 
-        link: "/tutorials"
+        link: "/projects"
     
     },
     {
         title: "Contact Info", 
         icon: "/images/icons/pricing.svg", 
-        link: "/pricing"
+        link: "/contact"
     }
-    ];
+];
 
     export const tooltipData = [
         { title: "Profile", icon: "/images/icons/profile.svg", link: "/profile" },
