@@ -92,7 +92,7 @@ const Wrapper = styled.div`
         width: 150px;
         height: 150px;
         right: 617px;
-        top: 0px;
+        top: -50px;
 
         background: url('/images/animations/medium2.png'), radial-gradient(
           218.51% 281.09% at 100% 100%,
@@ -137,17 +137,21 @@ const Wrapper = styled.div`
 
     .mockup3 {
         position: absolute;
-        width: 701px;
-        height: 428px;
-        right: 62px;
-        top: 60px;
+        width: 300px;
+        height: 300px; 
+        /* height: 200px;
+        width: 200px; */
+        left: 62px;
+        top: 70px;
 
-        background: url('/images/animations/mockup3.svg'), rgba(23, 12, 61, 0.5);
+        background: url('/images/animations/github.png'), rgba(23, 12, 61, 0.5);
         border: 0.342305px solid rgba(255, 255, 255, 0.2);
         backdrop-filter: blur(27.3844px);
         /* Note: backdrop-filter has minimal browser support */
-
-        border-radius: 6.8461px;
+        background-size: 300px;
+        background-position: center;
+        /* border-radius: 6.8461px; */
+        border-radius: 50%;
     }
 
     .mockup4 {
