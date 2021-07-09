@@ -15,8 +15,8 @@ console.log(window)
         aria-label="Click to see my blogs!"/>
         <div 
         className="mockup2" 
-        onClick={() => (window.location = "https://dev.to/rlc900")}
-        onKeyDown={() => (window.location = "https://dev.to/rlc900")}  
+        onClick={() => (window.location = "https://www.linkedin.com/in/riannacleary")}
+        onKeyDown={() => (window.location = "https://www.linkedin.com/in/riannacleary")}  
         role="link"  
         aria-label="Click to see my blogs!"
         />
