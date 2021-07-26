@@ -19,7 +19,6 @@ export default function AboutWaveBackground() {
              I knew this was the path I wanted to pursue so I enrolled into Flatiron School’s immersive software engineering program.  
              In my current role as a Software Engineering Coach at Flatiron School, I help and support students throughout their bootcamp journey by running code reviews, lectures, and design sprints. 
              I love the collaborative nature of my role and moving forward, I’d see myself in a similar environment: among other driven web developers with whom we work to attain bigger goals. 
-
              </span>
          </Description>
         </Wrapper>
@@ -59,8 +58,8 @@ const Title = styled(H1)`
   span {
     background: linear-gradient(180deg, #ffd7ff 0%, #ffb6ff 100%);
     background-clip: text;
-	-webkit-background-clip: text;
-	color: transparent;
+	  -webkit-background-clip: text;
+	  color: transparent;
   }
 
   /* for accessibility */
@@ -74,8 +73,13 @@ const Description = styled(P)`
    background-clip: text;
    -webkit-background-clip: text;
    color: transparent;
-   /* position: relative; */
-   bottom: 80px;
+   position: relative; 
+   margin-left:auto;
+   margin-right:auto;
+   text-align:center;
+   width: 500px; 
+   font-size: 21px;
+   top: 55px;
    
    span {
     background: linear-gradient(180deg, #ffd7ff 0%, #ffb6ff 100%);
