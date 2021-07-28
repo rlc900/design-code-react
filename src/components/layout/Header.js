@@ -1,19 +1,11 @@
 // import { Link } from 'gatsby';
-import React from 'react'
+import React, { forwardRef, useRef } from 'react'
 import styled from 'styled-components'
 import {menuData} from '../../data/MenuData'
-// import MenuButton from '../buttons/MenuButton';
-import { Link} from "react-scroll";
+import MenuButton from '../buttons/MenuButton';
+// import { Link} from "react-scroll";
 
 export default function Header() {
-    // return null
-// const [isOpen, setIsOpen] = useState(false)
-
-// function handleClick(event) {
-//     event.preventDefault()
-//     setIsOpen(!isOpen)
-//     console.log("im clicked!")
-// }
 
 // {menuData.map((item, index) => <MenuButton item={item} key={index}/>)}
 // {menuData.map((item, index) => 
@@ -36,36 +28,11 @@ export default function Header() {
 
     return (
         <Wrapper>
-            <Link
-                activeClass="active"
-                to="about"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-            >   
-            </Link>
-            <Link
-                activeClass="active"
-                to="projects"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-            >
-            </Link>
-            <Link
-                activeClass="active"
-                to="contact"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-            >
-            </Link>
+            {menuData.map((item, index) => <MenuButton item={item} key={index}/>)}
         </Wrapper>
     )
 }
+
 
 const Wrapper = styled.div`
     position: absolute;

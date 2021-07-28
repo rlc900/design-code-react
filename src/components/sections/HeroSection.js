@@ -4,21 +4,19 @@ import styled, { keyframes } from 'styled-components';
 // import {menuData} from '../../data/MenuData'
 import MockUpAnimation from '../animations/MockupAnimation';
 import WaveBackground from '../backgrounds/WaveBackground';
-import Header from '../layout/Header';
 import { themes } from '../styles/ColorStyles';
-import { H1, P } from '../styles/TextStyles';
-
+import { H1 } from '../styles/TextStyles';
+import {Link} from 'react-scroll'
 
 function HeroSection() {
+
+
     return (
       <Wrapper>
-        <WaveBackground/>
+        <Link to="about" smooth={true} duration={1000}>About</Link>
         <ContentWrapper>
-          <Header/>
           <TextWrapper>
             <Title>Rianna Cleary<br /> <span>Full Stack Developer</span></Title>
-             <Description></Description>
-             <GithubIcon/>
           </TextWrapper>
           <MockUpAnimation/>
         </ContentWrapper>
@@ -89,14 +87,11 @@ const Title = styled(H1)`
     }
 `
 
-const Description = styled(P)`
-  background: linear-gradient(180deg, #730040 0%, #301cbe 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  position: relative;
-  bottom: 80px;
-`
-const GithubIcon = styled.img`
-
-`
+// const Description = styled(P)`
+//   background: linear-gradient(180deg, #730040 0%, #301cbe 100%);
+//   background-clip: text;
+//   -webkit-background-clip: text;
+//   color: transparent;
+//   position: relative;
+//   bottom: 80px;
+// `

@@ -1,19 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby';
+
+
 // import { Link, animateScroll as scroll } from "react-scroll";
 
 
 export default function MenuButton(props) {
     const {item, index} = props
-    // console.log(props)
-    return (<Link 
-              to={item.link} onClick={props.onClick} key={index}>
-                <MenuItem title={item.title}>
-                <img src={item.icon} alt={item.title}/>
-                {item.title}
-                </MenuItem>
-            </Link>
+   
+    return (
+      <Link 
+             to={item.link} key={index}>
+               <MenuItem title={item.title}>
+               <img src={item.icon} alt={item.title}/>
+               {item.title}
+               </MenuItem>
+      </Link>
     )}
 
     const MenuItem = styled.div`

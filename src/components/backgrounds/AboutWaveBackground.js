@@ -5,8 +5,9 @@ import {H1, P} from '../styles/TextStyles'
 import {themes} from '../styles/ColorStyles'
 
 export default function AboutWaveBackground() {
+  
     return (
-        <Wrapper>
+        <Wrapper id="about">
          <WaveBackground/>
          <Title><span>About Me</span></Title>
          <Description>
