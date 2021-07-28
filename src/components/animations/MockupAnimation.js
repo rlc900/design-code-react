@@ -12,13 +12,16 @@ console.log(window)
         onClick={() => (window.location = "https://medium.com/@rianna.cleary")}
         onKeyDown={() => (window.location = "https://medium.com/@rianna.cleary")}  
         role="link"  
-        aria-label="Click to see my blogs!"/>
+        aria-label="Click to see my blogs!"
+        tabIndex={0}
+        />
         <div 
         className="mockup2" 
         onClick={() => (window.location = "https://www.linkedin.com/in/riannacleary")}
         onKeyDown={() => (window.location = "https://www.linkedin.com/in/riannacleary")}  
         role="link"  
         aria-label="Click to see my blogs!"
+        tabIndex={0}
         />
         <div 
         className="mockup3" 
@@ -26,6 +29,7 @@ console.log(window)
         onKeyDown={() => (window.location = "https://github.com/rlc900")}  
         role="link"  
         aria-label="Click to see my Github Repos!"
+        tabIndex={0}
         />
         
     </Wrapper>

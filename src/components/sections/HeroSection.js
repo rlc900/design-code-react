@@ -1,10 +1,10 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 // import {ReacComponent as GithubLogo} from '../../../static/images/icons/github-logo.png';
-import {menuData} from '../../data/MenuData'
+// import {menuData} from '../../data/MenuData'
 import MockUpAnimation from '../animations/MockupAnimation';
 import WaveBackground from '../backgrounds/WaveBackground';
-import PurchaseButton from '../buttons/PurchaseButton';
+import Header from '../layout/Header';
 import { themes } from '../styles/ColorStyles';
 import { H1, P } from '../styles/TextStyles';
 
@@ -14,6 +14,7 @@ function HeroSection() {
       <Wrapper>
         <WaveBackground/>
         <ContentWrapper>
+          <Header/>
           <TextWrapper>
             <Title>Rianna Cleary<br /> <span>Full Stack Developer</span></Title>
              <Description></Description>
