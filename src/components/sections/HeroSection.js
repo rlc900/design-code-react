@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import './HeroSection.css'
 // import {ReacComponent as GithubLogo} from '../../../static/images/icons/github-logo.png';
 // import {menuData} from '../../data/MenuData'
 import MockUpAnimation from '../animations/MockupAnimation';
@@ -10,10 +11,11 @@ import {Link} from 'react-scroll'
 
 function HeroSection() {
 
-
     return (
-      <Wrapper>
+      <Wrapper>  
         <Link to="about" smooth={true} duration={1000}>About</Link>
+        <Link to="project" smooth={true} duration={1000}>Project</Link>
+        <Link to="contact" smooth={true} duration={1000}>Contact</Link>
         <ContentWrapper>
           <TextWrapper>
             <Title>Rianna Cleary<br /> <span>Full Stack Developer</span></Title>

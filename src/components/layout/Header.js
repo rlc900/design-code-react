@@ -3,7 +3,8 @@ import React, { forwardRef, useRef } from 'react'
 import styled from 'styled-components'
 import {menuData} from '../../data/MenuData'
 import MenuButton from '../buttons/MenuButton';
-// import { Link} from "react-scroll";
+import {animateScroll as scroll} from "react-scroll";
+import { StickyContainer, Sticky } from 'react-sticky';
 
 export default function Header() {
 
@@ -28,7 +29,9 @@ export default function Header() {
 
     return (
         <Wrapper>
-            {menuData.map((item, index) => <MenuButton item={item} key={index}/>)}
+            <StickyContainer>
+            <Sticky isSticky={true}>{({ style }) => <Button style={style} onClick={() => scroll.scrollToTop()}>Home</Button>}</Sticky>
+            </StickyContainer>
         </Wrapper>
     )
 }
@@ -53,6 +56,13 @@ const Wrapper = styled.div`
         padding: 0 20px;
     }
 `
+
+const Button = styled.button`
+    position: sticky;
+
+`
+
+
 // const MenuHeader = styled.div`
 //     display: grid;
 //     gap: 30px;

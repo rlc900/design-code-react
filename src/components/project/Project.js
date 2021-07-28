@@ -2,6 +2,6 @@ import React from 'react';
 
 export default function Project() {
     return (
-        <div>Hey from Project</div>
+        <div id="project">Hey from Project</div>
     )
 }
