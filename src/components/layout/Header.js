@@ -60,6 +60,7 @@ const Wrapper = styled.div`
 const Button = styled.button`
     position: fixed;
     left: 10px;
+    z-index: 1;
 `
 
 
