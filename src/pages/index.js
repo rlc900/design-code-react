@@ -1,5 +1,5 @@
 import React from "react"
-import AboutWaveBackground from "../components/backgrounds/AboutWaveBackground"
+import About from "../components/backgrounds/About"
 import Contact from "../components/contact/Contact"
 import Project from "../components/project/Project"
 import Header from "../components/layout/Header"
@@ -14,7 +14,7 @@ function IndexPage() {
       <SEO title="Home" />
       <Header/>
       <HeroSection/>
-      <AboutWaveBackground/>
+      <About/>
       <Project/>
       <Contact/>
     </Layout>

@@ -8,25 +8,6 @@ import { StickyContainer, Sticky } from 'react-sticky';
 
 export default function Header() {
 
-// {menuData.map((item, index) => <MenuButton item={item} key={index}/>)}
-// {menuData.map((item, index) => 
-//     <Link
-//         activeClass="active"
-//         to={item.id}
-//         spy={true}
-//         smooth={true}
-//         offset={-70}
-//         duration={500}
-//     >
-//         {item.title}
-//     </Link>)}
-
-//NEXT STEPS TO DO:
-// 1. make links for about, project, and contact
-// 2. create components to be rendered out for them with a div and id of the name of component
-// 3. not sure yet??
-
-
     return (
         <Wrapper>
             <StickyContainer>

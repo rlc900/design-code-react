@@ -4,7 +4,7 @@ import WaveBackground from './WaveBackground'
 import {H1, P} from '../styles/TextStyles'
 import {themes} from '../styles/ColorStyles'
 
-export default function AboutWaveBackground() {
+export default function About() {
   
     return (
         <Wrapper id="about">
@@ -32,21 +32,21 @@ const animation = keyframes`
 `
 
 const Wrapper = styled.div`
+  // position: absolute;
+  // > * {
+  //   opacity: 0;
+  //   animation: ${animation} 1s 0.2s forwards;
 
-  > * {
-    opacity: 0;
-    animation: ${animation} 1s 0.2s forwards;
-
-    :nth-child(1) {
-      animation-delay: 0s;
-    }
-    :nth-child(2) {
-      animation-delay: 0.2s;
-    }
-    :nth-child(3) {
-      animation-delay: 0.4s;
-    }
-  }
+  //   :nth-child(1) {
+  //     animation-delay: 0s;
+  //   }
+  //   :nth-child(2) {
+  //     animation-delay: 0.2s;
+  //   }
+  //   :nth-child(3) {
+  //     animation-delay: 0.4s;
+  //   }
+  // }
 `
 const Title = styled(H1)`
   color: ${themes.dark.text1};
