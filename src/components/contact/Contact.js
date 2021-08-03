@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import {send} from 'emailjs-com';
 import {H1, P} from '../styles/TextStyles'
 import {themes} from '../styles/ColorStyles'
+import { Form, Input, TextArea, Button } from 'semantic-ui-react'
 
 
 export default function Contact() {
@@ -15,13 +16,6 @@ export default function Contact() {
 
     function sendEmail(e) {
         e.preventDefault();
-        // emailjs.sendForm('gmail', 'template_cslpuk6', e.target, 'user_Lzduu0l9rvR1CNT93ZOE6')
-        //   .then((result) => {
-        //       console.log(result.text);
-        //   }, (error) => {
-        //       console.log(error.text);
-        //   });
-        //   e.target.reset()
         send(
             'service_gyo7eki',
             'template_cslpuk6',
@@ -34,40 +28,43 @@ export default function Contact() {
             .catch((err) => {
               console.log('FAILED...', err);
             });
+        e.target.reset()
       }
 
-      const handleChange = (e) => {
-        setToSend({ ...toSend, [e.target.name]: e.target.value });
-      };
+    //   const handleChange = (e) => {
+    //     setToSend({ ...toSend, [e.target.name]: e.target.value });
+    //   };
 
 
     return (
         <Wrapper id="contact">
             <Title><span>Contact Me</span></Title>
-            <Description><span>Would you like to connect? Here is my email & more ways we can chat!</span></Description>
-            <form onSubmit={sendEmail}>
-                <div>
-                    <input type="text" className="form-control" placeholder="Name" name="name" value={toSend.name} onChange={handleChange}/>
-                </div>
-                <div>
-                    <input type="email" className="form-control" placeholder="Email Address" name="email" value={toSend.email} onChange={handleChange}/>
-                </div>
-                <div>
-                    <input type="text" className="form-control" placeholder="Subject" name="subject" value={toSend.subject} onChange={handleChange}/>
-                </div>
-                <div>
-                    <textarea className="form-control" placeholder="Your message" name="message" value={toSend.message} onChange={handleChange}></textarea>
-                </div>
-                <div>
-                    <input type="submit" value="Send Message" />
-                </div>
-            </form>
+            <Description><span>Feel free to send me an email if you'd like to connect!</span></Description>
+            <Form onSubmit={sendEmail}>
+                <Form.Group>
+                <Form.Input placeholder='First name' control={Input} name="name"/>
+                <Form.Input placeholder='Subject' control={Input} name="subject" />
+                <Form.Field
+                    id='form-input-control-error-email'
+                    name="email"
+                    control={Input}
+                    placeholder='joe@schmoe.com'
+                 />
+                 </Form.Group>
+                <Form.Field
+                    id='form-textarea-control-opinion'
+                    control={TextArea}
+                    placeholder='Opinion'
+                />
+            </Form>
+            <Button>Submit</Button>
         </Wrapper>
     )
 }
 
 const Wrapper = styled.div`
-    // position: absolute;
+    position: absolute;
+    
 `
 
 const Title = styled(H1)`
@@ -102,7 +99,10 @@ const Description = styled(P)`
    text-align:center;
    width: 500px; 
    font-size: 21px;
-   top: 55px;
+   bottom: 10px;
+   right: 30px;
+  
+
    
    span {
     background: linear-gradient(180deg, #ffd7ff 0%, #ffb6ff 100%);
@@ -110,9 +110,30 @@ const Description = styled(P)`
 	-webkit-background-clip: text;
 	color: transparent;
   }
+  
 
 /* for accessibility */
    @media (max-width: 450px) { 
         font-size: 48px;
     } 
 `
+
+//<form onSubmit={sendEmail}>
+//<div>
+//<div>
+    //<input type="text" className="form-control" placeholder="Name" name="name" value={toSend.name} onChange={handleChange}/>
+//</div>
+//<div>
+    //<input type="email" className="form-control" placeholder="Email Address" name="email" value={toSend.email} onChange={handleChange}/>
+//</div>
+//<div>
+    //<input type="text" className="form-control" placeholder="Subject" name="subject" value={toSend.subject} onChange={handleChange}/>
+//</div>
+//<div>
+    //<textarea className="form-control" placeholder="Your message" name="message" value={toSend.message} onChange={handleChange}></textarea>
+//</div>
+//<div>
+    //<input type="submit" value="Send Message" />
+//</div>
+//</div>
+//</form>
