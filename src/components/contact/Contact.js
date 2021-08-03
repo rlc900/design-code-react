@@ -31,9 +31,9 @@ export default function Contact() {
         e.target.reset()
       }
 
-    //   const handleChange = (e) => {
-    //     setToSend({ ...toSend, [e.target.name]: e.target.value });
-    //   };
+      const handleChange = (e) => {
+        setToSend({ ...toSend, [e.target.name]: e.target.value });
+      };
 
 
     return (
@@ -41,23 +41,42 @@ export default function Contact() {
             <Title><span>Contact Me</span></Title>
             <Description><span>Feel free to send me an email if you'd like to connect!</span></Description>
             <Form onSubmit={sendEmail}>
-                <Form.Group>
-                <Form.Input placeholder='First name' control={Input} name="name"/>
-                <Form.Input placeholder='Subject' control={Input} name="subject" />
+            <Form.Field
+                id='form-input-control-email'
+                control={Input}
+                label='Name'
+                name='name'
+                placeholder='Full name'
+                value={toSend.name}
+                onChange={handleChange}
+            />
+                <Form.Field
+                id='form-input-control-email'
+                control={Input}
+                label='Subject'
+                name='subject'
+                placeholder='Subject'
+                value={toSend.subject}
+                onChange={handleChange}
+            />
                 <Form.Field
                     id='form-input-control-error-email'
                     name="email"
                     control={Input}
                     placeholder='joe@schmoe.com'
+                    value={toSend.email}
+                    onChange={handleChange}
                  />
-                 </Form.Group>
                 <Form.Field
                     id='form-textarea-control-opinion'
                     control={TextArea}
-                    placeholder='Opinion'
+                    placeholder='Message'
+                    name="message"
+                    value={toSend.message}
+                    onChange={handleChange}
                 />
+                <Button type='submit'>Submit</Button>
             </Form>
-            <Button>Submit</Button>
         </Wrapper>
     )
 }
