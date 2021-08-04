@@ -13,7 +13,7 @@ export default function Project() {
 
     return (
         <Wrapper id="project">
-            <Title><span>Projects</span></Title>
+            <Title><span>My Projects</span></Title>
             <div 
                 className="mockup1" 
                 onClick={() => openNewTab('https://galaxybnb.herokuapp.com/home')}
@@ -38,11 +38,35 @@ export default function Project() {
         </Wrapper>
     )
 }
+
+const Title = styled(H1)` 
+    background: white;
+    -webkit-background-clip: text;
+    text-align: center;
+
+    span {
+    background: linear-gradient(180deg, #ffd7ff 0%, #ffb6ff 100%);
+    background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        
+    }
+
+    /* for accessibility */
+        @media (max-width: 450px) {
+        font-size: 48px;
+    }
+`
+
 const Wrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     padding: 0 2px;
     margin: 0 16px 16px 16px;
+    justify-content: center;
+    height: 30em;
+    
 
     /* these queries are not working */
     /* ipad */
@@ -85,7 +109,7 @@ div {
 .mockup1 {
     width: 150px;
     height: 150px;  
-    
+    margin: auto;
 
     background: url('/images/icons/saturn.png'), white;);
     background-size: 100px;
@@ -102,14 +126,9 @@ div {
 }
 
 .mockup2 {
-    // position: absolute;
-    /* width: 183px;
-    height: 120px; */
     width: 150px;
     height: 150px;
-    right: 403px;
-    top: 0px;
-    
+    margin: auto;
 
     background: url('/images/icons/ufo.png'), white;);
     background-size: 100px;
@@ -127,9 +146,9 @@ div {
 }
 
 .mockup3 {
-    // position: absolute;
     width: 150px;
     height: 150px;  
+    margin: auto;
 
     background: url('/images/icons/chat.png'), white;);
     background-size: 100px;
@@ -146,24 +165,3 @@ div {
 }
 `
 
-const Title = styled(H1)`
-    text-align: center;
-    color: ${themes.dark.text1};
-    /* background: linear-gradient(180deg, #730040 0%, #301cbe 100%); */
-    background: white;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-
-    span {
-    background: linear-gradient(180deg, #ffd7ff 0%, #ffb6ff 100%);
-    background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-    }
-
-    /* for accessibility */
-        @media (max-width: 450px) {
-        font-size: 48px;
-    }
-`
