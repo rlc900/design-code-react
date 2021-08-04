@@ -74,7 +74,7 @@ const Description = styled(P)`
    background-clip: text;
    -webkit-background-clip: text;
    color: transparent;
-   position: relative; 
+  //  position: relative; 
    margin-left:auto;
    margin-right:auto;
    text-align:center;

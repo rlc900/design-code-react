@@ -3,7 +3,8 @@ import styled from 'styled-components'
 import {send} from 'emailjs-com';
 import {H1, P} from '../styles/TextStyles'
 import {themes} from '../styles/ColorStyles'
-import { Form, Input, TextArea, Button } from 'semantic-ui-react'
+import { Form, Input, TextArea, Button, Icon, Grid } from 'semantic-ui-react'
+import './Contact.css'
 
 
 export default function Contact() {
@@ -41,49 +42,63 @@ export default function Contact() {
             <Title><span>Contact Me</span></Title>
             <Description><span>Feel free to send me an email if you'd like to connect!</span></Description>
             <Form onSubmit={sendEmail}>
-            <Form.Field
-                id='form-input-control-email'
-                control={Input}
-                label='Name'
-                name='name'
-                placeholder='Full name'
-                value={toSend.name}
-                onChange={handleChange}
+                <Form.Field
+                    id='form-input-control-name'
+                    control={Input}
+                    name='name'
+                    placeholder='Full name'
+                    value={toSend.name}
+                    onChange={handleChange}
+                
             />
                 <Form.Field
-                id='form-input-control-email'
-                control={Input}
-                label='Subject'
-                name='subject'
-                placeholder='Subject'
-                value={toSend.subject}
-                onChange={handleChange}
+                    id='form-input-control-subject'
+                    control={Input}
+                    name='subject'
+                    placeholder='Subject'
+                    value={toSend.subject}
+                    onChange={handleChange}
+               
             />
                 <Form.Field
-                    id='form-input-control-error-email'
+                    id='form-input-control-email'
                     name="email"
                     control={Input}
                     placeholder='joe@schmoe.com'
                     value={toSend.email}
                     onChange={handleChange}
+                   
                  />
                 <Form.Field
-                    id='form-textarea-control-opinion'
+                    id='form-textarea-control-message'
                     control={TextArea}
                     placeholder='Message'
                     name="message"
                     value={toSend.message}
                     onChange={handleChange}
+                    
                 />
-                <Button type='submit'>Submit</Button>
+                <Grid>
+                    <Grid.Column textAlign="center">
+                        <Button 
+                        type='submit' 
+                        basic color='pink' content='Pink'
+                        circular={true}
+                        icon
+                        >
+                        <Icon name='send' />
+                        </Button>
+                    </Grid.Column>
+                 </Grid>
             </Form>
         </Wrapper>
     )
 }
 
 const Wrapper = styled.div`
-    position: absolute;
-    
+    position: relative;
+    margin: auto;
+    width: 100%;
 `
 
 const Title = styled(H1)`
@@ -93,6 +108,8 @@ const Title = styled(H1)`
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    text-align: center;
+    
 
     span {
     background: linear-gradient(180deg, #ffd7ff 0%, #ffb6ff 100%);
@@ -112,17 +129,12 @@ const Description = styled(P)`
    background-clip: text;
    -webkit-background-clip: text;
    color: transparent;
-   position: relative; 
    margin-left:auto;
    margin-right:auto;
    text-align:center;
-   width: 500px; 
    font-size: 21px;
    bottom: 10px;
-   right: 30px;
-  
 
-   
    span {
     background: linear-gradient(180deg, #ffd7ff 0%, #ffb6ff 100%);
     background-clip: text;
@@ -136,23 +148,3 @@ const Description = styled(P)`
         font-size: 48px;
     } 
 `
-
-//<form onSubmit={sendEmail}>
-//<div>
-//<div>
-    //<input type="text" className="form-control" placeholder="Name" name="name" value={toSend.name} onChange={handleChange}/>
-//</div>
-//<div>
-    //<input type="email" className="form-control" placeholder="Email Address" name="email" value={toSend.email} onChange={handleChange}/>
-//</div>
-//<div>
-    //<input type="text" className="form-control" placeholder="Subject" name="subject" value={toSend.subject} onChange={handleChange}/>
-//</div>
-//<div>
-    //<textarea className="form-control" placeholder="Your message" name="message" value={toSend.message} onChange={handleChange}></textarea>
-//</div>
-//<div>
-    //<input type="submit" value="Send Message" />
-//</div>
-//</div>
-//</form>
