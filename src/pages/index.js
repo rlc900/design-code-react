@@ -8,16 +8,17 @@ import Layout from "../components/layout/layout"
 import SEO from "../components/layout/seo"
 import HeroSection from "../components/sections/HeroSection"
 import 'semantic-ui-css/semantic.min.css'
+import HomeButton from "../components/home/HomeButton"
 
 function IndexPage() {
   return (
     <Layout>
       <SEO title="Home" />
-      <Header/>
       <HeroSection/>
       <About/>
       <Project/>
       <Contact/>
+      <HomeButton/>
     </Layout>
   )
 }

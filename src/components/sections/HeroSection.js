@@ -13,9 +13,9 @@ function HeroSection() {
 
     return (
       <Wrapper>  
-        <Link to="about" smooth={true} duration={1000}>About</Link>
-        <Link to="project" smooth={true} duration={1000}>Project</Link>
-        <Link to="contact" smooth={true} duration={1000}>Contact</Link>
+        <Link className='link-one' to="about" smooth={true} duration={1000}>About</Link>
+        <Link className='link-two' to="project" smooth={true} duration={1000}>Project</Link>
+        <Link className='link-three' to="contact" smooth={true} duration={1000}>Contact</Link>
         <ContentWrapper>
           <TextWrapper>
             <Title>Rianna Cleary<br /> <span>Full Stack Developer</span></Title>
@@ -35,6 +35,30 @@ const animation = keyframes`
 
 const Wrapper = styled.div`
   overflow: hidden;
+
+  .link-one {
+    background: linear-gradient(180deg, #730040 0%, #301cbe 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .link-two {
+    background: linear-gradient(180deg, #730040 0%, #301cbe 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+  }
+
+  .link-three {
+    background: linear-gradient(180deg, #730040 0%, #301cbe 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+  }
+
 `
 const ContentWrapper = styled.div`
   height: 100vh;
@@ -88,12 +112,3 @@ const Title = styled(H1)`
         font-size: 48px;
     }
 `
-
-// const Description = styled(P)`
-//   background: linear-gradient(180deg, #730040 0%, #301cbe 100%);
-//   background-clip: text;
-//   -webkit-background-clip: text;
-//   color: transparent;
-//   position: relative;
-//   bottom: 80px;
-// `
