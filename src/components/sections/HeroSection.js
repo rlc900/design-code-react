@@ -1,10 +1,8 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import './HeroSection.css'
-// import {ReacComponent as GithubLogo} from '../../../static/images/icons/github-logo.png';
-// import {menuData} from '../../data/MenuData'
 import MockUpAnimation from '../animations/MockupAnimation';
-import WaveBackground from '../backgrounds/WaveBackground';
+// import WaveBackground from '../backgrounds/WaveBackground';
 import { themes } from '../styles/ColorStyles';
 import { H1 } from '../styles/TextStyles';
 import {Link} from 'react-scroll'

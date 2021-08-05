@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
-import WaveBackground from './WaveBackground'
+// import WaveBackground from './WaveBackground'
 import {H1, P} from '../styles/TextStyles'
 import {themes} from '../styles/ColorStyles'
 
@@ -8,7 +8,6 @@ export default function About() {
   
     return (
         <Wrapper id="about">
-         <WaveBackground/>
          <Title><span>About Me</span></Title>
          <Description>
              <span>
@@ -55,6 +54,7 @@ const Title = styled(H1)`
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  text-align: center;
 
   span {
     background: linear-gradient(180deg, #ffd7ff 0%, #ffb6ff 100%);

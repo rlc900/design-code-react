@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import {H1} from '../styles/TextStyles'
-import {themes} from '../styles/ColorStyles'
+
 
 export default function Project() {
 
@@ -12,11 +12,13 @@ export default function Project() {
 
 
     return (
+        <>
+        <Title><span>My Projects</span></Title>
         <Wrapper id="project">
-            <Title><span>My Projects</span></Title>
             <div 
                 className="mockup1" 
                 onClick={() => openNewTab('https://galaxybnb.herokuapp.com/home')}
+                onKeyPress={() => openNewTab('https://galaxybnb.herokuapp.com/home')}
                 role="link"  
                 aria-label="Click to go to Galaxybnb!"
                 tabIndex={0}
@@ -24,6 +26,7 @@ export default function Project() {
              <div 
                 className="mockup2" 
                 onClick={() => openNewTab('https://galaxybnb.herokuapp.com/home')}
+                onKeyPress={() => openNewTab('https://galaxybnb.herokuapp.com/home')}
                 role="link"  
                 aria-label="Click to go to Rick and Morty Quiz app!"
                 tabIndex={0}
@@ -31,25 +34,30 @@ export default function Project() {
              <div 
                 className="mockup3" 
                 onClick={() => openNewTab('https://galaxybnb.herokuapp.com/home')}
+                onKeyPress={() => openNewTab('https://galaxybnb.herokuapp.com/home')}
                 role="link"  
                 aria-label="Click to go to Rick and Morty Quiz app!"
                 tabIndex={0}
              />
         </Wrapper>
+        </>
     )
 }
 
 const Title = styled(H1)` 
+    height: 20px;
     background: white;
+    background-clip: text;
     -webkit-background-clip: text;
+    color: transparent;
     text-align: center;
+    
 
     span {
-    background: linear-gradient(180deg, #ffd7ff 0%, #ffb6ff 100%);
-    background-clip: text;
+        background: linear-gradient(180deg, #ffd7ff 0%, #ffb6ff 100%);
+        background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
-        
     }
 
     /* for accessibility */

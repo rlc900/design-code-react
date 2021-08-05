@@ -1,8 +1,8 @@
 // import { Link } from 'gatsby';
-import React, { forwardRef, useRef } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import {menuData} from '../../data/MenuData'
-import MenuButton from '../buttons/MenuButton';
+// import {menuData} from '../../data/MenuData'
+// import MenuButton from '../buttons/MenuButton';
 import {animateScroll as scroll} from "react-scroll";
 import { StickyContainer, Sticky } from 'react-sticky';
 
