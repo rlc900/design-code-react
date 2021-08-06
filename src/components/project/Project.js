@@ -96,28 +96,11 @@ div {
     transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-
-:hover div {
-    transform: rotateY(0deg) rotateX(0deg);
-
-    &.mockup1 {
-        transition-delay: 0.2s;
-        transform: translate(-30px, -30px)
-    }
-    &.mockup2 {
-        transition-delay: 0.2s;
-        transform: translate(0px, -30px)
-    }
-    &.mockup3 {
-        transition-delay: 0.2s;
-        transform: translate(-30px, -30px)
-    }
-}
-
 .mockup1 {
     width: 150px;
     height: 150px;  
     margin: auto;
+    display: inline-block;
 
     background: url('/images/icons/saturn.png'), white;);
     background-size: 100px;
@@ -131,12 +114,19 @@ div {
 
     border-radius: 50%;
 
+
+}
+
+.mockup1:hover {
+    transform: translate(0, -5px);
+    filter: brightness(120%) saturate(120%);
 }
 
 .mockup2 {
     width: 150px;
     height: 150px;
     margin: auto;
+    display: inline-block;
 
     background: url('/images/icons/ufo.png'), white;);
     background-size: 100px;
@@ -153,10 +143,16 @@ div {
     border-radius: 50%;
 }
 
+.mockup2:hover {
+    transform: translate(0, -5px);
+    filter: brightness(120%) saturate(120%);
+}
+
 .mockup3 {
     width: 150px;
     height: 150px;  
     margin: auto;
+    display: inline-block;
 
     background: url('/images/icons/chat.png'), white;);
     background-size: 100px;
@@ -170,6 +166,11 @@ div {
 
     
     border-radius: 50%;
+}
+
+.mockup3:hover {
+    transform: translate(0, -5px);
+    filter: brightness(120%) saturate(120%);
 }
 `
 
