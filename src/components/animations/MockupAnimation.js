@@ -76,7 +76,7 @@ const Wrapper = styled.div`
             transition-delay: 0s;
         }
         :hover {
-            filter: brightness(150%) saturate(120%)
+            filter: brightness(120%) saturate(120%)
         }
     }
 
@@ -89,14 +89,10 @@ const Wrapper = styled.div`
         right: 617px;
         top: -50px;
 
-        background: url('/images/animations/medium2.png'), radial-gradient(
-          218.51% 281.09% at 100% 100%,
-          rgba(253, 63, 51, 0.6) 0%,
-          rgba(76, 0, 200, 0.6) 45.83%,
-          rgba(76, 0, 200, 0.6) 100%
-        );
-        background-size: 160px;
+        background: url('/images/icons/blog.png'), white;);
+        background-size: 120px;
         background-position: center;
+        background-repeat: no-repeat;
         border: 0.273134px solid rgba(255, 255, 255, 0.3);
         box-sizing: border-box;
         box-shadow: 0px 16.3881px 32.7761px rgba(99, 30, 187, 0.5);
@@ -110,21 +106,15 @@ const Wrapper = styled.div`
 
     .mockup2 {
         position: absolute;
-        /* width: 183px;
-        height: 120px; */
         width: 150px;
         height: 150px;
         right: 403px;
         top: 0px;
 
-        background: url('/images/animations/linkedin2.png'), linear-gradient(
-          198.85deg,
-          #4316db 12.72%,
-          #9076e7 54.49%,
-          #a2eeff 100.01%
-        );
-        background-size: 150px;
+        background: url('/images/icons/linkedin.png'),white;);
+        background-size: 100px;
         background-position: center;
+        background-repeat: no-repeat;
         border: 0.27304px solid rgba(255, 255, 255, 0.5);
         box-shadow: 0px 8.19119px 16.3824px rgba(0, 0, 0, 0.1),
       0px 16.3824px 32.7648px rgba(0, 0, 0, 0.15);
@@ -144,12 +134,13 @@ const Wrapper = styled.div`
         left: 62px;
         top: 70px;
 
-        background: url('/images/animations/github.png'), rgba(23, 12, 61, 0.5);
+        background: url('/images/icons/github.png'), white;;
         border: 0.342305px solid rgba(255, 255, 255, 0.2);
         backdrop-filter: blur(27.3844px);
         /* Note: backdrop-filter has minimal browser support */
-        background-size: 300px;
+        background-size: 250px;
         background-position: center;
+        background-repeat: no-repeat;
         /* border-radius: 6.8461px; */
         border-radius: 50%;
     }
