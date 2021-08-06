@@ -116,8 +116,7 @@ const Wrapper = styled.div`
         background-position: center;
         background-repeat: no-repeat;
         border: 0.27304px solid rgba(255, 255, 255, 0.5);
-        box-shadow: 0px 8.19119px 16.3824px rgba(0, 0, 0, 0.1),
-      0px 16.3824px 32.7648px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 16.3881px 32.7761px rgba(99, 30, 187, 0.5);      0px 16.3824px 32.7648px rgba(0, 0, 0, 0.15);
         backdrop-filter: blur(21.8432px);
     /* Note: backdrop-filter has minimal browser support */
 
@@ -141,6 +140,7 @@ const Wrapper = styled.div`
         background-size: 250px;
         background-position: center;
         background-repeat: no-repeat;
+        box-shadow: 0px 16.3881px 32.7761px rgba(99, 30, 187, 0.5);
         /* border-radius: 6.8461px; */
         border-radius: 50%;
     }
