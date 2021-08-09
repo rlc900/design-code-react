@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+// import { Reveal } from 'semantic-ui-react'
 // import {Link} from 'react-router-dom'
 
 
@@ -14,7 +15,8 @@ console.log(window)
         role="link"  
         aria-label="Click to see my blogs!"
         tabIndex={0}
-        />
+        >
+        </div>
         <div 
         className="mockup2" 
         onClick={() => (window.location = "https://www.linkedin.com/in/riannacleary")}
@@ -30,7 +32,8 @@ console.log(window)
         role="link"  
         aria-label="Click to see my Github Repos!"
         tabIndex={0}
-        />
+        >
+        </div>
         
     </Wrapper>
 )}
@@ -73,6 +76,7 @@ const Wrapper = styled.div`
             transform: translate(0px, -30px)
         }
         &.mockup3 {
+            display: block;
             transition-delay: 0s;
         }
         :hover {
