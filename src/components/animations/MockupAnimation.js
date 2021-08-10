@@ -5,13 +5,17 @@ import styled from 'styled-components'
 
 
 export default function MockUpAnimation() {
+    const openNewTab = (url) => {
+        const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+        if (newWindow) newWindow.opener = null
+    }
 console.log(window)
     return (
     <Wrapper>
         <div 
         className="mockup1" 
-        onClick={() => (window.location = "https://medium.com/@rianna.cleary")}
-        onKeyDown={() => (window.location = "https://medium.com/@rianna.cleary")}  
+        onClick={() => openNewTab("https://medium.com/@rianna.cleary")}
+        onKeyDown={() => openNewTab("https://medium.com/@rianna.cleary")}  
         role="link"  
         aria-label="Click to see my blogs!"
         tabIndex={0}
@@ -19,16 +23,16 @@ console.log(window)
         </div>
         <div 
         className="mockup2" 
-        onClick={() => (window.location = "https://www.linkedin.com/in/riannacleary")}
-        onKeyDown={() => (window.location = "https://www.linkedin.com/in/riannacleary")}  
+        onClick={() => openNewTab("https://www.linkedin.com/in/riannacleary")}
+        onKeyDown={() => openNewTab("https://www.linkedin.com/in/riannacleary")}  
         role="link"  
         aria-label="Click to see my blogs!"
         tabIndex={0}
         />
         <div 
         className="mockup3" 
-        onClick={() => (window.location = "https://github.com/rlc900")}
-        onKeyDown={() => (window.location = "https://github.com/rlc900")}  
+        onClick={() => openNewTab("https://github.com/rlc900")}
+        onKeyDown={() => openNewTab("https://github.com/rlc900")}  
         role="link"  
         aria-label="Click to see my Github Repos!"
         tabIndex={0}
