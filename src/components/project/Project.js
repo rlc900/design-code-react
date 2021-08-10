@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import {H1} from '../styles/TextStyles'
+import {Popup} from 'semantic-ui-react'
 
 
 export default function Project() {
@@ -15,6 +16,10 @@ export default function Project() {
         <>
         <Title><span>My Projects</span></Title>
         <Wrapper id="project">
+            <Popup 
+            content='Galaxybnb' 
+            position='top center'
+            trigger={
             <div 
                 className="mockup1" 
                 onClick={() => openNewTab('https://galaxybnb.herokuapp.com/home')}
@@ -22,7 +27,12 @@ export default function Project() {
                 role="link"  
                 aria-label="Click to go to Galaxybnb!"
                 tabIndex={0}
+             />}
              />
+             <Popup 
+            content='Rick and Morty Quiz' 
+            position='top center'
+            trigger={
              <div 
                 className="mockup2" 
                 onClick={() => openNewTab('https://galaxybnb.herokuapp.com/home')}
@@ -30,14 +40,20 @@ export default function Project() {
                 role="link"  
                 aria-label="Click to go to Rick and Morty Quiz app!"
                 tabIndex={0}
-             />
-             <div 
+             />}
+             /> 
+             <Popup 
+             content='EZ Chat' 
+             position='top center'
+             trigger={
+                <div
                 className="mockup3" 
                 onClick={() => openNewTab('https://nifty-elion-c5b8ef.netlify.app/')}
                 onKeyPress={() => openNewTab('https://nifty-elion-c5b8ef.netlify.app/')}
                 role="link"  
                 aria-label="Click to go to Rick and Morty Quiz app!"
                 tabIndex={0}
+             />}
              />
         </Wrapper>
         </>
@@ -51,6 +67,7 @@ const Title = styled(H1)`
     -webkit-background-clip: text;
     color: transparent;
     text-align: center;
+    
     
 
     span {
