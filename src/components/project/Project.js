@@ -33,8 +33,8 @@ export default function Project() {
              />
              <div 
                 className="mockup3" 
-                onClick={() => openNewTab('https://galaxybnb.herokuapp.com/home')}
-                onKeyPress={() => openNewTab('https://galaxybnb.herokuapp.com/home')}
+                onClick={() => openNewTab('https://nifty-elion-c5b8ef.netlify.app/')}
+                onKeyPress={() => openNewTab('https://nifty-elion-c5b8ef.netlify.app/')}
                 role="link"  
                 aria-label="Click to go to Rick and Morty Quiz app!"
                 tabIndex={0}
