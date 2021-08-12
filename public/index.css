@@ -1,0 +1,30 @@
+.theme-light {
+    --dark-text: #5E4B56;
+    --accent: #dbe7e4;
+    --button-border: #5E4B56;
+    --dark-background: #DBE7E4;
+    --light-text: #5E4B56;
+    --light-background: #BCEADE;
+  }
+  
+  .theme-dark {
+    --dark-text: #292929;
+    --dark-background: #2D048D;
+    --light-background: #BCEADE;
+    --accent: #b8dbd9;
+    --button-border: #b8dbd9;
+    --light-text: #F9F8F8;
+  }
+
+  * {
+    background-color: var(--dark-background);
+    color: var(--dark-text);
+  }
+  
+  html, #root {
+    height: 100%;
+  }
+  
+  body {
+    height: 100%;
+  }

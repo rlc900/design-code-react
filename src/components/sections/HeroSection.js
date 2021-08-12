@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled, { keyframes } from 'styled-components';
 import './HeroSection.css'
 import MockUpAnimation from '../animations/MockupAnimation';
@@ -6,14 +6,21 @@ import MockUpAnimation from '../animations/MockupAnimation';
 import { themes } from '../styles/ColorStyles';
 import { H1 } from '../styles/TextStyles';
 import {Link} from 'react-scroll'
+import { keepTheme } from '../styles/themes';
+import Toggle from '../backgrounds/Toggle';
 
 function HeroSection() {
+
+    useEffect(() => {
+      keepTheme()
+    })
 
     return (
       <Wrapper>  
         <Link className='link-one' to="about" smooth={true} duration={1000}>About</Link>
         <Link className='link-two' to="project" smooth={true} duration={1000}>Project</Link>
         <Link className='link-three' to="contact" smooth={true} duration={1000}>Contact</Link>
+        <Toggle/>
         <ContentWrapper>
           <TextWrapper>
             <Title>Rianna Cleary<br /> <span>Full Stack Developer</span></Title>
@@ -32,8 +39,13 @@ const animation = keyframes`
 `
 
 const Wrapper = styled.div`
-  overflow: hidden;
-
+  // overflow: visible;
+  // background: url('/images/animations/circle2.png');
+  
+  // background-repeat: no-repeat;
+  // background-size: auto 200px;
+  height: 100%;
+  
   .link-one {
     background: linear-gradient(180deg, #730040 0%, #301cbe 100%);
     background-clip: text;

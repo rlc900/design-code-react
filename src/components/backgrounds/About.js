@@ -34,7 +34,7 @@ export default function About() {
 const Wrapper = styled.div`
   display: flex;
   height: 400px;
-
+  // background: url('/images/animations/circle2.png');
     .child {
       flex: 1
     }
