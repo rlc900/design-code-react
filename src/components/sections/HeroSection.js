@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 import './HeroSection.css'
 import MockUpAnimation from '../animations/MockupAnimation';
@@ -6,21 +6,32 @@ import MockUpAnimation from '../animations/MockupAnimation';
 import { themes } from '../styles/ColorStyles';
 import { H1 } from '../styles/TextStyles';
 import {Link} from 'react-scroll'
-import { keepTheme } from '../styles/themes';
-import Toggle from '../backgrounds/Toggle';
+
 
 function HeroSection() {
+  const [mode, setMode] = useState('light')
 
-    useEffect(() => {
-      keepTheme()
-    })
+  const lightMode = {
+    pageBackground: 'white',
+    titleColor: 'dc658b',
+    tagLineColor: 'black'
+}
+const darkMode = {
+    pageBackground: '282c36',
+    titleColor: 'lightpink',
+    tagLineColor: 'lavender'
+}
+
+const modes = {
+    light: lightMode,
+    dark: darkMode
+}
 
     return (
       <Wrapper>  
         <Link className='link-one' to="about" smooth={true} duration={1000}>About</Link>
         <Link className='link-two' to="project" smooth={true} duration={1000}>Project</Link>
         <Link className='link-three' to="contact" smooth={true} duration={1000}>Contact</Link>
-        <Toggle/>
         <ContentWrapper>
           <TextWrapper>
             <Title>Rianna Cleary<br /> <span>Full Stack Developer</span></Title>
@@ -45,6 +56,7 @@ const Wrapper = styled.div`
   // background-repeat: no-repeat;
   // background-size: auto 200px;
   height: 100%;
+  background-color: white;
   
   .link-one {
     background: linear-gradient(180deg, #730040 0%, #301cbe 100%);
