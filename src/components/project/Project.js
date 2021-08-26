@@ -62,7 +62,7 @@ export default function Project() {
 
 const Title = styled(H1)` 
     height: 20px;
-    margin-top: 550px;
+    margin-top: 600px;
     background: white;
     background-clip: text;
     -webkit-background-clip: text;

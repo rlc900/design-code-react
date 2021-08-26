@@ -16,13 +16,15 @@ export default function About() {
              Hi there! My name is Rianna Cleary and I am a full-stack web developer with an expertise in JavaScript, 
              React, Ruby on Rails, HTML, CSS, Ruby, 
              Rails, Git, SQL, Postgres, Bcrypt, Jest, Pair-programming, & Agile methodology. 
+             <br></br>
              While my main passion is coding and tech, I also love making music and DJing. I am based in NYC. 
              I started to code when I was 20, or during a time in my life where I had absolutely no clue what I wanted to pursue. 
              I had been into tech since I could remember, which started first with video games and gadgets. 
              <br></br>
              Initially, I began learning on websites like Codecadamy and FreeCodeCamp and really fell in love with the problem-solving aspect of programming. 
              I knew this was the path I wanted to pursue so I enrolled into Flatiron School’s immersive software engineering program.  
-             In my current role as a Software Engineering Coach at Flatiron School, I help and support students throughout their bootcamp journey by running code reviews, lectures, and design sprints. 
+             In my current role as a Software Engineering Coach at Flatiron School, I help and support students throughout their bootcamp journey by running code reviews, lectures, and design sprints.
+             <br></br> 
              I love the collaborative nature of my role and moving forward, I’d see myself in a similar environment: among other driven web developers with whom we work to attain bigger goals. 
              </span>
          </Description>
@@ -67,9 +69,10 @@ const Description = styled(P)`
    margin-top: 20px;
    -webkit-background-clip: text;
    color: transparent;
+
    margin-left:auto;
    margin-right:auto;
-   text-align:center;
+   text-align: justify;
    width: 350px; 
    height: 200px;
    font-size: 18px;
