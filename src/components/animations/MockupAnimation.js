@@ -77,7 +77,7 @@ const Wrapper = styled.div`
         }
         &.mockup2 {
             transition-delay: 0.2s;
-            transform: translate(0px, -30px)
+            transform: translate(0px, -60px)
         }
         &.mockup3 {
             display: block;

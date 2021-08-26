@@ -62,6 +62,7 @@ export default function Project() {
 
 const Title = styled(H1)` 
     height: 20px;
+    margin-top: 550px;
     background: white;
     background-clip: text;
     -webkit-background-clip: text;
@@ -90,7 +91,7 @@ const Wrapper = styled.div`
     padding: 0 2px;
     margin: 0 16px 16px 16px;
     justify-content: center;
-    height: 30em;
+    height: 400px;
     
 
     /* these queries are not working */

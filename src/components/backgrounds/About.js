@@ -64,13 +64,13 @@ const Title = styled(H1)`
 const Description = styled(P)`
    background: white;
    background-clip: text;
+   margin-top: 20px;
    -webkit-background-clip: text;
    color: transparent;
    margin-left:auto;
    margin-right:auto;
    text-align:center;
-  //  flex: auto;
-  //  width: 400px; 
+   width: 350px; 
    height: 200px;
    font-size: 18px;
    top: 55px;
@@ -88,24 +88,6 @@ const Description = styled(P)`
         font-size: 48px;
     } 
 `
-// const Headshot = styled.div`
-//         // // width: 200px;
-//         // height: 200px; 
-//         // margin: auto;
-//         // width: 60%;
-
-
-//         // background: url('/images/avatars/headshot.png');
-//         // border: 0.342305px solid rgba(255, 255, 255, 0.2);
-//         // background-size: 300px;
-//         // background-position: center;
-//         // background-repeat: no-repeat;
-//         // box-shadow: 0px 16.3881px 32.7761px rgba(99, 30, 187, 0.5);
-//         // border-radius: 50%;
-
-//         // /* Note: backdrop-filter has minimal browser support */
-//         // backdrop-filter: blur(27.3844px);
-// `
 
 const Headshot = styled.img` 
 

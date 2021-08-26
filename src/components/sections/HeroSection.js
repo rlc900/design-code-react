@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import './HeroSection.css'
 import MockUpAnimation from '../animations/MockupAnimation';
@@ -9,23 +9,6 @@ import {Link} from 'react-scroll'
 
 
 function HeroSection() {
-  const [mode, setMode] = useState('light')
-
-  const lightMode = {
-    pageBackground: 'white',
-    titleColor: 'dc658b',
-    tagLineColor: 'black'
-}
-const darkMode = {
-    pageBackground: '282c36',
-    titleColor: 'lightpink',
-    tagLineColor: 'lavender'
-}
-
-const modes = {
-    light: lightMode,
-    dark: darkMode
-}
 
     return (
       <Wrapper>  
@@ -121,8 +104,9 @@ const Title = styled(H1)`
   span {
     background: linear-gradient(180deg, #ffd7ff 0%, #ffb6ff 100%);
     background-clip: text;
-	-webkit-background-clip: text;
-	color: transparent;
+	  -webkit-background-clip: text;
+	  color: transparent;
+    font-size: 30px;
   }
 
   @media (max-width: 450px) {
