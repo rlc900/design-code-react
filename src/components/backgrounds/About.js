@@ -10,7 +10,7 @@ export default function About() {
       <>
       <Title><span>About Me</span></Title>
         <Wrapper id="about">
-          <Headshot className='child'/>
+          <Headshot className='child' src='/images/avatars/headshot.png'/>
           <Description className='child'>
              <span>
              Hi there! My name is Rianna Cleary and I am a full-stack web developer with an expertise in JavaScript, 
@@ -32,7 +32,7 @@ export default function About() {
 }
 
 const Wrapper = styled.div`
-  display: flex;
+  // display: flex;
   height: 400px;
   // background: url('/images/animations/circle2.png');
     .child {
@@ -88,40 +88,38 @@ const Description = styled(P)`
         font-size: 48px;
     } 
 `
-const Headshot = styled.div`
-        max-width: 450px;
-        height: 401px; 
-        left: 62px;
-        top: 70px;
-        // align-self: flex-start;
-        margin-right: 20px;
+// const Headshot = styled.div`
+//         // // width: 200px;
+//         // height: 200px; 
+//         // margin: auto;
+//         // width: 60%;
 
-        background: url('/images/avatars/headshot.png');
+
+//         // background: url('/images/avatars/headshot.png');
+//         // border: 0.342305px solid rgba(255, 255, 255, 0.2);
+//         // background-size: 300px;
+//         // background-position: center;
+//         // background-repeat: no-repeat;
+//         // box-shadow: 0px 16.3881px 32.7761px rgba(99, 30, 187, 0.5);
+//         // border-radius: 50%;
+
+//         // /* Note: backdrop-filter has minimal browser support */
+//         // backdrop-filter: blur(27.3844px);
+// `
+
+const Headshot = styled.img` 
+
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+  // width: 50%;
+        max-width: 15%;
+        height: auto;
+        // left: 62px;
+        // top: 70px;
         
-        border: 0.342305px solid rgba(255, 255, 255, 0.2);
-        backdrop-filter: blur(27.3844px);
-        /* Note: backdrop-filter has minimal browser support */
-        background-size: 350px;
         background-position: center;
         background-repeat: no-repeat;
         box-shadow: 0px 16.3881px 32.7761px rgba(99, 30, 187, 0.5);
         border-radius: 50%;
 `
-
-// const Headshot = styled.img` 
-//         max-width: 100%;
-//         height: 500px;
-//         left: 62px;
-//         top: 70px;
-//         // align-self: flex-start;
-
-     
-//         // border: 0.342305px solid rgba(255, 255, 255, 0.2);
-//         // backdrop-filter: blur(27.3844px);
-//         /* Note: backdrop-filter has minimal browser support */
-//         // background-size: 320px;
-//         background-position: center;
-//         background-repeat: no-repeat;
-//         box-shadow: 0px 16.3881px 32.7761px rgba(99, 30, 187, 0.5);
-//         border-radius: 50%;
-// `

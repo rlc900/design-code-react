@@ -50,11 +50,6 @@ const animation = keyframes`
 `
 
 const Wrapper = styled.div`
-  // overflow: visible;
-  // background: url('/images/animations/circle2.png');
-  
-  // background-repeat: no-repeat;
-  // background-size: auto 200px;
   height: 100%;
   background-color: white;
   
