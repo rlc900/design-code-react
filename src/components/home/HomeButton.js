@@ -9,18 +9,19 @@ export default function HomeButton() {
         <Wrapper id="home">
             <Button 
                 onClick={() => scroll.scrollToTop()}
-                basic color='pink' content='Pink'
-                circular={true}
+                basic color='standard' content='standard'
+                floated='right'
+                as='icon'
                 icon
-            >
-                <Icon name='home' />
+            >  
+            <Icon name='arrow up' />
             </Button>
         </Wrapper>
     )
 }
 
 const Wrapper = styled.div`
-    position: absolute;
+    // position: relative;
     top: 60px;
     display: flex;
     right: 10px;
@@ -39,11 +40,10 @@ const Wrapper = styled.div`
     }
 
     .button {
-        box-shadow: 0 0 0 1px #e03997 inset!important;
-        color: #e03997!important;
+        // box-shadow: white inset!important;
+        // color: #e03997!important;
         position: fixed;
-        right: 1px;
-        top: 1px;
+        top: 10px;
     } 
 `
 

@@ -1,10 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components'
 import {H1} from '../styles/TextStyles'
-import {Popup} from 'semantic-ui-react'
+import {Popup, Button, Header, Icon, Modal } from 'semantic-ui-react'
 
 
 export default function Project() {
+    const [open, setOpen] = useState(false)
+
+    const apps = [
+    {
+        name: 'EZ Chat'
+    },
+    {
+        name: 'Rick and Morty Quiz App'
+    },
+    {
+        name: 'Galaxybnb'
+    }
+]
+    
 
     const openNewTab = (url) => {
         const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
@@ -30,9 +44,9 @@ export default function Project() {
              />}
              />
              <Popup 
-            content='Rick and Morty Quiz' 
-            position='top center'
-            trigger={
+                content='Rick and Morty Quiz' 
+                position='top center'
+                trigger={
              <div 
                 className="mockup2" 
                 onClick={() => openNewTab('https://galaxybnb.herokuapp.com/home')}
@@ -56,9 +70,44 @@ export default function Project() {
              />}
              />
         </Wrapper>
-        </>
+        <ModalWrapper>
+        {apps.map((app) => {
+            
+           return ( 
+           <Modal
+            onClose={() => setOpen(false)}
+            onOpen={() => setOpen(true)}
+            open={open}
+            trigger={<Button size='small' icon='stack overflow'></Button>}
+            >
+               <Modal.Description>
+                   <Header>{app.name}</Header>
+                <p>
+                 Tech stack will go here.
+                </p>
+               </Modal.Description>
+               <Modal.Actions>
+               <Button color='black' onClick={() => setOpen(false)}>
+                Close
+               </Button>
+            </Modal.Actions>
+            </Modal>
+        )
+    })}
+         </ModalWrapper>
+    </>
     )
 }
+
+const ModalWrapper = styled.div`
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0 2px;
+    margin: 0 16px 16px 16px;
+    justify-content: center;
+`
 
 const Title = styled(H1)` 
     height: 20px;
@@ -191,4 +240,16 @@ div {
     filter: brightness(120%) saturate(120%);
 }
 `
-
+//<Popup 
+            // content='Rick and Morty Quiz' 
+            // position='top center'
+            // trigger={
+            //  <div 
+                // className="mockup2" 
+                // onClick={() => openNewTab('https://galaxybnb.herokuapp.com/home')}
+                // onKeyPress={() => openNewTab('https://galaxybnb.herokuapp.com/home')}
+                // role="link"  
+                // aria-label="Click to go to Rick and Morty Quiz app!"
+                // tabIndex={0}
+            //  />}
+            //  /> 

@@ -6,6 +6,7 @@ import MockUpAnimation from '../animations/MockupAnimation';
 import { themes } from '../styles/ColorStyles';
 import { H1 } from '../styles/TextStyles';
 import {Link} from 'react-scroll'
+import HomeButton from '../home/HomeButton';
 
 
 function HeroSection() {
@@ -15,6 +16,7 @@ function HeroSection() {
         <Link className='link-three' to="contact" smooth={true} duration={1000}>Contact</Link>
         <Link className='link-two' to="project" smooth={true} duration={1000}>Project</Link>
         <Link className='link-one' to="about" smooth={true} duration={1000}>About</Link>
+        <HomeButton/>
         <ContentWrapper>
           <TextWrapper>
             <Title>Rianna Cleary<br /> <span>Full Stack Developer</span></Title>
@@ -87,7 +89,7 @@ const TextWrapper = styled.div`
   max-width: 360px;
   display: grid;
   gap: 30px;
-
+ 
   > * {
     opacity: 0;
     animation: ${animation} 1s 0.2s forwards;
@@ -109,7 +111,7 @@ const Title = styled(H1)`
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  
+ 
 
   span {
     background: linear-gradient(180deg, #ffd7ff 0%, #ffb6ff 100%);

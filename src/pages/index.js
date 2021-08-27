@@ -9,6 +9,7 @@ import SEO from "../components/layout/seo"
 import HeroSection from "../components/sections/HeroSection"
 import 'semantic-ui-css/semantic.min.css'
 import HomeButton from "../components/home/HomeButton"
+// import HomeButton from "../components/home/HomeButton"
 
 
 
@@ -20,7 +21,6 @@ function IndexPage() {
       <About/>
       <Project/>
       <Contact/>
-      <HomeButton/>
     </>
   )
 }

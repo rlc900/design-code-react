@@ -95,7 +95,6 @@ const Wrapper = styled.div`
         height: 120px; */
         width: 150px;
         height: 150px;
-        left: 30px;
         top: -50px;
         
 
@@ -118,7 +117,7 @@ const Wrapper = styled.div`
         position: absolute;
         width: 150px;
         height: 150px;
-        left: 296px;
+        left: 234px;
         top: 0px;
 
         background: url('/images/icons/linkedin.png'),white;);
@@ -138,7 +137,7 @@ const Wrapper = styled.div`
         position: absolute;
         width: 300px;
         height: 300px; 
-        left: 62px;
+        // left: 62px;
         top: 70px;
 
         background: url('/images/icons/github.png'), white;;
