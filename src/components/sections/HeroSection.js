@@ -12,9 +12,9 @@ function HeroSection() {
 
     return (
       <Wrapper>  
-        <Link className='link-one' to="about" smooth={true} duration={1000}>About</Link>
-        <Link className='link-two' to="project" smooth={true} duration={1000}>Project</Link>
         <Link className='link-three' to="contact" smooth={true} duration={1000}>Contact</Link>
+        <Link className='link-two' to="project" smooth={true} duration={1000}>Project</Link>
+        <Link className='link-one' to="about" smooth={true} duration={1000}>About</Link>
         <ContentWrapper>
           <TextWrapper>
             <Title>Rianna Cleary<br /> <span>Full Stack Developer</span></Title>
@@ -33,40 +33,49 @@ const animation = keyframes`
 `
 
 const Wrapper = styled.div`
-  height: 100%;
+  
+  height: auto;
   background-color: white;
   
-  .link-one {
+  
+  .link-three {
+    float: right;
     background: linear-gradient(180deg, #730040 0%, #301cbe 100%);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+
   }
 
   .link-two {
+    float: right;
     background: linear-gradient(180deg, #730040 0%, #301cbe 100%);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-
   }
 
-  .link-three {
+  .link-one {
+    float: right;
     background: linear-gradient(180deg, #730040 0%, #301cbe 100%);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-
   }
 
 `
 const ContentWrapper = styled.div`
   height: 100vh;
+  // width: 10px;
 	max-width: 1234px;
-  margin: 0 auto;
+  margin: auto;
 	padding: 200px 30px;
-  display: grid;
-  grid-template-columns: 360px auto;
+  // display: grid;
+  display: flex;
+  flex-direction: row;
+  // grid-template-columns: 360px auto;
+  justify-content: center;
+
 
   @media (max-width: 450px) {
     grid-template-columns: auto;
@@ -100,6 +109,7 @@ const Title = styled(H1)`
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  
 
   span {
     background: linear-gradient(180deg, #ffd7ff 0%, #ffb6ff 100%);

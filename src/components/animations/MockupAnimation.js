@@ -45,6 +45,7 @@ console.log(window)
 const Wrapper = styled.div`
     position: relative;
     perspective: 5000;
+    text-align: center;
   
 
         /* these queries are not working */
@@ -94,8 +95,9 @@ const Wrapper = styled.div`
         height: 120px; */
         width: 150px;
         height: 150px;
-        right: 617px;
+        left: 30px;
         top: -50px;
+        
 
         background: url('/images/icons/blog.png'), white;);
         background-size: 120px;
@@ -116,7 +118,7 @@ const Wrapper = styled.div`
         position: absolute;
         width: 150px;
         height: 150px;
-        right: 403px;
+        left: 296px;
         top: 0px;
 
         background: url('/images/icons/linkedin.png'),white;);
