@@ -1,26 +1,35 @@
 import React, {useState} from 'react';
 import styled from 'styled-components'
 import {H1} from '../styles/TextStyles'
-import {Popup, Button, Header, Icon, Modal } from 'semantic-ui-react'
-
+import {Popup} from 'semantic-ui-react'
+import Modal from './Modal'
 
 export default function Project() {
     const [open, setOpen] = useState(false)
 
     const apps = [
     {
-        name: 'EZ Chat'
+        name: 'Galaxybnb',
+        id: 1
     },
     {
-        name: 'Rick and Morty Quiz App'
+        name: 'Rick and Morty Quiz App',
+        id: 2
     },
     {
-        name: 'Galaxybnb'
+        name: 'EZ-Chat',
+        id: 3
     }
 ]
+    const openModal = (e) => {
+        // console.log(open)
+        e.preventDefault()
+        setOpen(!open)
+    }
     
 
     const openNewTab = (url) => {
+        // console.log('hi')
         const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
         if (newWindow) newWindow.opener = null
     }
@@ -36,8 +45,8 @@ export default function Project() {
             trigger={
             <div 
                 className="mockup1" 
-                onClick={() => openNewTab('https://galaxybnb.herokuapp.com/home')}
-                onKeyPress={() => openNewTab('https://galaxybnb.herokuapp.com/home')}
+                onClick={() => setOpen(true)}
+                onKeyPress={() => setOpen(true)}
                 role="link"  
                 aria-label="Click to go to Galaxybnb!"
                 tabIndex={0}
@@ -49,8 +58,8 @@ export default function Project() {
                 trigger={
              <div 
                 className="mockup2" 
-                onClick={() => openNewTab('https://galaxybnb.herokuapp.com/home')}
-                onKeyPress={() => openNewTab('https://galaxybnb.herokuapp.com/home')}
+                onClick={() => setOpen(true)}
+                onKeyPress={() => setOpen(true)}
                 role="link"  
                 aria-label="Click to go to Rick and Morty Quiz app!"
                 tabIndex={0}
@@ -62,52 +71,30 @@ export default function Project() {
              trigger={
                 <div
                 className="mockup3" 
-                onClick={() => openNewTab('https://nifty-elion-c5b8ef.netlify.app/')}
-                onKeyPress={() => openNewTab('https://nifty-elion-c5b8ef.netlify.app/')}
+                onClick={() => setOpen(true)}
+                onKeyPress={() => setOpen(true)}
                 role="link"  
                 aria-label="Click to go to Rick and Morty Quiz app!"
                 tabIndex={0}
              />}
              />
         </Wrapper>
-        <ModalWrapper>
-        {apps.map((app) => {
-            
-           return ( 
-           <Modal
-            onClose={() => setOpen(false)}
-            onOpen={() => setOpen(true)}
-            open={open}
-            trigger={<Button size='small' icon='stack overflow'></Button>}
-            >
-               <Modal.Description>
-                   <Header>{app.name}</Header>
-                <p>
-                 Tech stack will go here.
-                </p>
-               </Modal.Description>
-               <Modal.Actions>
-               <Button color='black' onClick={() => setOpen(false)}>
-                Close
-               </Button>
-            </Modal.Actions>
-            </Modal>
-        )
-    })}
-         </ModalWrapper>
+        <Modal show={open} modalClosed={openModal}>
+                <div 
+                    style={{color:'black'}}
+                 >
+                    The Best Has Happened To ME
+                </div>
+        </Modal>
     </>
     )
 }
 
-const ModalWrapper = styled.div`
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    padding: 0 2px;
-    margin: 0 16px 16px 16px;
-    justify-content: center;
-`
+// onClick={() => openNewTab('https://nifty-elion-c5b8ef.netlify.app/')}
+// onKeyPress={() => openNewTab('https://nifty-elion-c5b8ef.netlify.app/')}
+
+// onClick={() => openNewTab('https://galaxybnb.herokuapp.com/home')}
+// onKeyPress={() => openNewTab('https://galaxybnb.herokuapp.com/home')}
 
 const Title = styled(H1)` 
     height: 20px;
