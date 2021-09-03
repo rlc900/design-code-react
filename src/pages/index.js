@@ -4,11 +4,11 @@ import Contact from "../components/contact/Contact"
 import Project from "../components/project/Project"
 // import Header from "../components/layout/Header"
 // import { Link } from "gatsby"
-import Layout from "../components/layout/layout"
+// import Layout from "../components/layout/layout"
 import SEO from "../components/layout/seo"
 import HeroSection from "../components/sections/HeroSection"
 import 'semantic-ui-css/semantic.min.css'
-import HomeButton from "../components/home/HomeButton"
+// import HomeButton from "../components/home/HomeButton"
 // import HomeButton from "../components/home/HomeButton"
 
 

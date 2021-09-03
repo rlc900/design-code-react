@@ -6,33 +6,24 @@ import Modal from './Modal'
 
 export default function Project() {
     const [open, setOpen] = useState(false)
+    const [description, setDescription] = useState('')
+    const [name, setName] = useState('')
+    const [selectedModal, setSelectedModal] = useState({})
 
-    const apps = [
-    {
-        name: 'Galaxybnb',
-        id: 1
-    },
-    {
-        name: 'Rick and Morty Quiz App',
-        id: 2
-    },
-    {
-        name: 'EZ-Chat',
-        id: 3
-    }
-]
-    const openModal = (e) => {
+    const openModal = (e, name, description) => {
         // console.log(open)
         e.preventDefault()
         setOpen(!open)
+        setDescription(description)
+        setName(name)
     }
     
 
-    const openNewTab = (url) => {
-        // console.log('hi')
-        const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
-        if (newWindow) newWindow.opener = null
-    }
+    // const openNewTab = (url) => {
+    //     // console.log('hi')
+    //     const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+    //     if (newWindow) newWindow.opener = null
+    // }
 
 
     return (
@@ -45,7 +36,10 @@ export default function Project() {
             trigger={
             <div 
                 className="mockup1" 
-                onClick={() => setOpen(true)}
+                onClick={() => {
+                    setOpen(true)
+                    setSelectedModal({name: 'Galaxybnb',
+                    description: 'This is Galaxybnb'})}}
                 onKeyPress={() => setOpen(true)}
                 role="link"  
                 aria-label="Click to go to Galaxybnb!"
@@ -58,7 +52,11 @@ export default function Project() {
                 trigger={
              <div 
                 className="mockup2" 
-                onClick={() => setOpen(true)}
+                onClick={() => {
+                    setOpen(true)
+                    setSelectedModal({name: 'Rick and Morty Quiz App',
+                    description: 'This is Rick and Morty Quiz'})
+                }}
                 onKeyPress={() => setOpen(true)}
                 role="link"  
                 aria-label="Click to go to Rick and Morty Quiz app!"
@@ -71,7 +69,11 @@ export default function Project() {
              trigger={
                 <div
                 className="mockup3" 
-                onClick={() => setOpen(true)}
+                onClick={() => {
+                    setOpen(true)
+                    setSelectedModal({name: 'EZ-Chat',
+                    description: 'This is EZ-Chat'})
+                }}
                 onKeyPress={() => setOpen(true)}
                 role="link"  
                 aria-label="Click to go to Rick and Morty Quiz app!"
@@ -79,13 +81,17 @@ export default function Project() {
              />}
              />
         </Wrapper>
-        <Modal show={open} modalClosed={openModal}>
-                <div 
-                    style={{color:'black'}}
-                 >
-                    The Best Has Happened To ME
-                </div>
-        </Modal>
+        { open ?
+            <Modal show={open} selectedModal={selectedModal} modalClosed={openModal} description={description} name={name}>
+            <div 
+                style={{color:'black'}}
+             >
+                 Hey
+            </div>
+            </Modal> 
+            :
+            null
+        }
     </>
     )
 }
