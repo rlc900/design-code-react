@@ -39,7 +39,7 @@ export default function Project() {
                 onClick={() => {
                     setOpen(true)
                     setSelectedModal({name: 'Galaxybnb',
-                    description: 'This is Galaxybnb'})}}
+                    description: 'Description: A React application that allows users to book vacations on different Star Wars planets!'})}}
                 onKeyPress={() => setOpen(true)}
                 role="link"  
                 aria-label="Click to go to Galaxybnb!"
@@ -54,8 +54,9 @@ export default function Project() {
                 className="mockup2" 
                 onClick={() => {
                     setOpen(true)
-                    setSelectedModal({name: 'Rick and Morty Quiz App',
-                    description: 'This is Rick and Morty Quiz'})
+                    setSelectedModal({
+                    name: 'Rick and Morty Quiz App ', 
+                    description: 'Description: A React application that allows users to take a "Which character are you?" quiz based on the T.V. show Rick and Morty!'})
                 }}
                 onKeyPress={() => setOpen(true)}
                 role="link"  
@@ -72,7 +73,7 @@ export default function Project() {
                 onClick={() => {
                     setOpen(true)
                     setSelectedModal({name: 'EZ-Chat',
-                    description: 'This is EZ-Chat'})
+                    description: 'Description: An app that allows you to chat EaZily with your friends!'})
                 }}
                 onKeyPress={() => setOpen(true)}
                 role="link"  
