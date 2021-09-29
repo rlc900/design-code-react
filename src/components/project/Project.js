@@ -72,12 +72,13 @@ export default function Project() {
                 className="mockup3" 
                 onClick={() => {
                     setOpen(true)
-                    setSelectedModal({name: 'EZ-Chat',
+                    setSelectedModal({
+                    name: 'EZ-Chat',  
                     description: 'Description: An app that allows you to chat EaZily with your friends!'})
                 }}
                 onKeyPress={() => setOpen(true)}
                 role="link"  
-                aria-label="Click to go to Rick and Morty Quiz app!"
+                aria-label="Click to go to EZ Chat!"
                 tabIndex={0}
              />}
              />
@@ -188,6 +189,7 @@ div {
     height: 150px;
     margin: auto;
     display: inline-block;
+    
 
     background: url('/images/icons/ufo.png'), white;);
     background-size: 100px;
