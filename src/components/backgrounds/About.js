@@ -22,9 +22,12 @@ export default function About() {
              I had been into tech since I could remember, which started first with video games and gadgets. 
              <br></br>
              Initially, I began learning on websites like Codecadamy and FreeCodeCamp and really fell in love with the problem-solving aspect of programming. 
-             I knew this was the path I wanted to pursue so I enrolled into Flatiron School’s immersive software engineering program.  
-             In my current role as a Software Engineering Coach at Flatiron School, I help and support students throughout their bootcamp journey by running code reviews, lectures, and design sprints.
+             I knew this was the path I wanted to pursue, so I enrolled into Flatiron School’s immersive software engineering program in which I learned all about Full Stack Development.  
+             I graduated in March of 2020 right before the pandemic hit and was able to become a Software Engineering Coach there in October of that year!
+             In that role, I helped and supported students throughout their bootcamp journey by running code reviews, lectures, and design sprints.
              <br></br> 
+             In my free time, I'm usually spending too much time playing video games, 
+             creating music or meditating to keep my stimulated brain at ease.
              I love the collaborative nature of my role and moving forward, I’d see myself in a similar environment: among other driven web developers with whom we work to attain bigger goals. 
              </span>
          </Description>
