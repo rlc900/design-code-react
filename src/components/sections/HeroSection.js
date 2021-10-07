@@ -50,7 +50,7 @@ const Wrapper = styled.div`
   
   height: auto;
   // background-color: black;
-  z-index: -1;
+  
   
   .link-three {
     float: right;
