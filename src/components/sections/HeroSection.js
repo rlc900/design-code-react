@@ -12,7 +12,19 @@ import HomeButton from '../home/HomeButton';
 function HeroSection() {
 
     return (
-      <Wrapper>  
+      <Wrapper>
+        <section>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </section>
         <Link className='link-three' to="contact" smooth={true} duration={1000}>Contact</Link>
         <Link className='link-two' to="project" smooth={true} duration={1000}>Project</Link>
         <Link className='link-one' to="about" smooth={true} duration={1000}>About</Link>
@@ -37,8 +49,8 @@ const animation = keyframes`
 const Wrapper = styled.div`
   
   height: auto;
-  background-color: white;
-  
+  // background-color: black;
+  z-index: -1;
   
   .link-three {
     float: right;
@@ -66,6 +78,7 @@ const Wrapper = styled.div`
   }
 
 `
+
 const ContentWrapper = styled.div`
   height: 100vh;
   // width: 10px;
