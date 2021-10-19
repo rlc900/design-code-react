@@ -13,18 +13,6 @@ function HeroSection() {
 
     return (
       <Wrapper>
-        <section>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </section>
         <Link className='link-three' to="contact" smooth={true} duration={1000}>Contact</Link>
         <Link className='link-two' to="project" smooth={true} duration={1000}>Project</Link>
         <Link className='link-one' to="about" smooth={true} duration={1000}>About</Link>
@@ -138,3 +126,16 @@ const Title = styled(H1)`
         font-size: 48px;
     }
 `
+
+// <section>
+// <span></span>
+// <span></span>
+// <span></span>
+// <span></span>
+// <span></span>
+// <span></span>
+// <span></span>
+// <span></span>
+// <span></span>
+// <span></span>
+// </section>

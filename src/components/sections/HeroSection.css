@@ -10,7 +10,7 @@ a:hover {
       /* inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.2); */
   }
 
-  section {
+  /* section {
     position: absolute;
     top: 0;
     left: 0;
@@ -136,4 +136,4 @@ a:hover {
     left: initial;
     animation-delay: 2.75s;
     animation-duration: 2.25s;
-  }
+  } */
