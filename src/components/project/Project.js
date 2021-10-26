@@ -19,11 +19,11 @@ export default function Project() {
     }
     
 
-    // const openNewTab = (url) => {
-    //     // console.log('hi')
-    //     const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
-    //     if (newWindow) newWindow.opener = null
-    // }
+    const openNewTab = (url) => {
+        // console.log('hi')
+        const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+        if (newWindow) newWindow.opener = null
+    }
 
 
     return (
@@ -38,8 +38,11 @@ export default function Project() {
                 className="mockup1" 
                 onClick={() => {
                     setOpen(true)
-                    setSelectedModal({name: 'Galaxybnb',
-                    description: 'Description: A React application that allows users to book vacations on different Star Wars planets!'})}}
+                    setSelectedModal({
+                    name: 'Galaxybnb',
+                    description: 'Description: A React application that allows users to book vacations on different Star Wars planets!',
+                    url: 'https://galaxybnb.herokuapp.com/home'
+                })}}
                 onKeyPress={() => setOpen(true)}
                 role="link"  
                 aria-label="Click to go to Galaxybnb!"
@@ -56,7 +59,9 @@ export default function Project() {
                     setOpen(true)
                     setSelectedModal({
                     name: 'Rick and Morty Quiz App ', 
-                    description: 'Description: A React application that allows users to take a "Which character are you?" quiz based on the T.V. show Rick and Morty!'})
+                    description: 'Description: A React application that allows users to take a "Which character are you?" quiz based on the T.V. show Rick and Morty!',
+                    url: 'https://galaxybnb.herokuapp.com/home'
+                })    
                 }}
                 onKeyPress={() => setOpen(true)}
                 role="link"  
@@ -74,7 +79,9 @@ export default function Project() {
                     setOpen(true)
                     setSelectedModal({
                     name: 'EZ-Chat',  
-                    description: 'Description: An app that allows you to chat EaZily with your friends!'})
+                    description: 'Description: An app that allows you to chat EaZily with your friends!',
+                    url: 'https://nifty-elion-c5b8ef.netlify.app/'
+                })
                 }}
                 onKeyPress={() => setOpen(true)}
                 role="link"  

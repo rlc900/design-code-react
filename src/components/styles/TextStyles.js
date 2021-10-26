@@ -79,3 +79,12 @@ export const SmallText2 = styled.p`
   line-height: 130%;
   text-transform: uppercase;
 `
+
+export const Link = styled.link`
+  font-weight: bold;
+  font-size: 60px;
+
+  @media (max-width: 450px) {
+      font-size: 34px;
+    } 
+`
