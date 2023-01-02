@@ -126,16 +126,4 @@ const Title = styled(H1)`
         font-size: 48px;
     }
 `
-
-// <section>
-// <span></span>
-// <span></span>
-// <span></span>
-// <span></span>
-// <span></span>
-// <span></span>
-// <span></span>
-// <span></span>
-// <span></span>
-// <span></span>
-// </section>
+// this is a test comment for commiting
