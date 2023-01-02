@@ -75,14 +75,7 @@ export default function Project() {
              trigger={
                 <div
                 className="mockup3" 
-                onClick={() => {
-                    setOpen(true)
-                    setSelectedModal({
-                    name: 'EZ-Chat',  
-                    description: 'Description: An app that allows you to chat EaZily with your friends!',
-                    url: 'https://nifty-elion-c5b8ef.netlify.app/'
-                })
-                }}
+                onClick={() => openNewTab('https://nifty-elion-c5b8ef.netlify.app/')}
                 onKeyPress={() => setOpen(true)}
                 role="link"  
                 aria-label="Click to go to EZ Chat!"
