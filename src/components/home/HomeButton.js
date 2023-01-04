@@ -21,7 +21,7 @@ export default function HomeButton() {
             {backToTopButton && (
                 <Button 
                 onClick={() => scroll.scrollToTop()}
-                basic color='standard' content='standard'
+                basic color='violet' content='standard'
                 floated='right'
                 as='icon'
                 icon

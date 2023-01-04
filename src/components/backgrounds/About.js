@@ -17,12 +17,7 @@ export default function About() {
              React, Ruby on Rails, HTML, CSS, Ruby, 
              Rails, Git, SQL, Postgres, Bcrypt, Jest, Pair-programming, & Agile methodology. 
              <br></br>
-             While my main passion is coding and tech, I also love making music and DJing. I am based in NYC. 
-             I started to code when I was 20, or during a time in my life where I had absolutely no clue what I wanted to pursue. 
-             I had been into tech since I could remember, which started first with video games and gadgets. 
-             <br></br>
-             Initially, I began learning on websites like Codecadamy and FreeCodeCamp and really fell in love with the problem-solving aspect of programming. 
-             I knew this was the path I wanted to pursue, so I enrolled into Flatiron School’s immersive software engineering program in which I learned all about Full Stack Development.  
+             I enrolled into Flatiron School’s immersive software engineering program in November 2021 in which I learned all about Full Stack Development.  
              I graduated in March of 2020 right before the pandemic hit and was able to become a Software Engineering Coach there in October of that year!
              In that role, I helped and supported students throughout their bootcamp journey by running code reviews, lectures, and design sprints.
              <br></br> 
