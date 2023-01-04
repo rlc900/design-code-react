@@ -68,15 +68,18 @@ const Wrapper = styled.div`
 
 const ContentWrapper = styled.div`
   height: 100vh;
-  // width: 10px;
-	// max-width: 1234px;
   margin: auto;
 	padding: 200px 30px;
-  // display: grid;
-  display: flex;
-  flex-direction: row;
+  
+ 
+  
+
+  // flex-direction: row;
   // grid-template-columns: 360px auto;
-  justify-content: center;
+  // display: grid;
+  // width: 10px;
+	// max-width: 1234px;
+  
 
 
   @media (max-width: 450px) {
@@ -90,6 +93,7 @@ const TextWrapper = styled.div`
   // display: grid;
   // gap: 30px;
   text-align: center;
+  
  
   > * {
     opacity: 0;
@@ -112,6 +116,7 @@ const Title = styled(H1)`
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  
  
  
 
