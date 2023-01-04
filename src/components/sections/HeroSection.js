@@ -116,6 +116,7 @@ const Title = styled(H1)`
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  font-size: 90px;
   
  
  
@@ -125,7 +126,7 @@ const Title = styled(H1)`
     background-clip: text;
 	  -webkit-background-clip: text;
 	  color: transparent;
-    font-size: 30px;
+    font-size: 40px;
   }
 
   @media (max-width: 450px) {

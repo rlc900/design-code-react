@@ -1,13 +1,25 @@
 import React from 'react'
+import { useEffect, useState } from 'react';
 import {animateScroll as scroll} from "react-scroll";
 import styled from 'styled-components'
 import {Button, Icon} from 'semantic-ui-react'
 
 export default function HomeButton() {
+    const [backToTopButton, setBackToTopButton] = useState(false);
 
+    useEffect(() => {
+      window.addEventListener('scroll', () =>{
+        if (window.scrollY > 300) {
+            setBackToTopButton(true)
+        } else {
+            setBackToTopButton(false)
+        }
+      }) 
+    }, [])
     return (
         <Wrapper id="home">
-            <Button 
+            {backToTopButton && (
+                <Button 
                 onClick={() => scroll.scrollToTop()}
                 basic color='standard' content='standard'
                 floated='right'
@@ -16,6 +28,7 @@ export default function HomeButton() {
             >  
             <Icon name='arrow up' />
             </Button>
+            )}
         </Wrapper>
     )
 }
