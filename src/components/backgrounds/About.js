@@ -32,12 +32,10 @@ export default function About() {
 }
 
 const Wrapper = styled.div`
-  // display: flex;
-  height: 400px;
-  // background: url('/images/animations/circle2.png');
-    .child {
-      flex: 1
-    }
+  height: 100px;
+    // .child {
+    //   flex: 1
+    // }
 `
 
 const Title = styled(H1)`
@@ -48,6 +46,7 @@ const Title = styled(H1)`
   -webkit-background-clip: text;
   color: transparent;
   text-align: center;
+  // margin-left: 70px;
 
   span {
     background: linear-gradient(180deg, #ffd7ff 0%, #ffb6ff 100%);
@@ -64,23 +63,27 @@ const Title = styled(H1)`
 const Description = styled(P)`
    background: white;
    background-clip: text;
-   margin-top: 20px;
+  //  margin-top: 20px;
    -webkit-background-clip: text;
    color: transparent;
 
    margin-left:auto;
    margin-right:auto;
    text-align: justify;
-   width: 350px; 
-   height: 200px;
+   width: 500px; 
+   height: 300px;
+   
    font-size: 18px;
-   top: 55px;
+   padding: 30px;
+  //  top: 55px;
    
    span {
     background: linear-gradient(180deg, #ffd7ff 0%, #ffb6ff 100%);
     background-clip: text;
 	  -webkit-background-clip: text;
 	  color: transparent;
+    text-align: center;
+    width; 100px;
    
   }
 
