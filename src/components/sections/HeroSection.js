@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import './HeroSection.css'
-import MockUpAnimation from '../animations/MockupAnimation';
+// import MockUpAnimation from '../animations/MockupAnimation';
 // import WaveBackground from '../backgrounds/WaveBackground';
 import { themes } from '../styles/ColorStyles';
 import { H1 } from '../styles/TextStyles';
@@ -21,7 +21,6 @@ function HeroSection() {
           <TextWrapper>
             <Title>Rianna Cleary<br /> <span>Full Stack Developer</span></Title>
           </TextWrapper>
-          <MockUpAnimation/>
         </ContentWrapper>
       </Wrapper>
     )
@@ -70,7 +69,7 @@ const Wrapper = styled.div`
 const ContentWrapper = styled.div`
   height: 100vh;
   // width: 10px;
-	max-width: 1234px;
+	// max-width: 1234px;
   margin: auto;
 	padding: 200px 30px;
   // display: grid;
@@ -87,9 +86,10 @@ const ContentWrapper = styled.div`
   }
 `
 const TextWrapper = styled.div`
-  max-width: 360px;
-  display: grid;
-  gap: 30px;
+  // max-width: 360px;
+  // display: grid;
+  // gap: 30px;
+  text-align: center;
  
   > * {
     opacity: 0;
@@ -112,6 +112,7 @@ const Title = styled(H1)`
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+ 
  
 
   span {
