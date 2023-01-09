@@ -1,18 +1,35 @@
-import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import React, {useState, useEffect} from 'react';
+import styled, { keyframes, ThemeProvider } from 'styled-components';
 import './HeroSection.css'
-// import MockUpAnimation from '../animations/MockupAnimation';
-// import WaveBackground from '../backgrounds/WaveBackground';
 import { themes } from '../styles/ColorStyles';
 import { H1 } from '../styles/TextStyles';
+import { GlobalStyle, lightTheme, darkTheme } from '../styles/GlobalStyle';
 import {Link} from 'react-scroll'
 import HomeButton from '../home/HomeButton';
+// import MockUpAnimation from '../animations/MockupAnimation';
+// import WaveBackground from '../backgrounds/WaveBackground';
 
 
 function HeroSection() {
 
+  const [theme, setTheme] = useState('light')
+  const isDarkTheme = theme === 'dark';
+
+  const toggleTheme = () => {
+    setTheme(isDarkTheme ? 'light' : 'dark');
+    console.log('hi')
+  };
+
+// useEffect(() => {
+//   document.body.className = theme;
+// }, [theme]);
+
     return (
+      <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+        <>
+       <GlobalStyle/>
       <Wrapper>
+         <button onClick={toggleTheme}>Toggle Theme</button>
         <Link className='link-three' to="contact" smooth={true} duration={1000}>Contact</Link>
         <Link className='link-two' to="project" smooth={true} duration={1000}>Project</Link>
         <Link className='link-one' to="about" smooth={true} duration={1000}>About</Link>
@@ -22,7 +39,10 @@ function HeroSection() {
             <Title>Rianna Cleary<br /> <span>Full Stack Developer</span></Title>
           </TextWrapper>
         </ContentWrapper>
+        
       </Wrapper>
+      </>
+      </ThemeProvider>
     )
 }
 
@@ -36,7 +56,6 @@ const animation = keyframes`
 const Wrapper = styled.div`
   
   height: auto;
-  // background-color: black;
   
   
   .link-three {
