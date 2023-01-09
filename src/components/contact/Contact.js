@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import styled from 'styled-components'
-import {send} from 'emailjs-com';
+// import {send} from 'emailjs-com';
+import emailjs from 'emailjs-com'
 import {H1, P} from '../styles/TextStyles'
 import {themes} from '../styles/ColorStyles'
 import { Form, Input, TextArea, Button, Icon, Grid } from 'semantic-ui-react'
@@ -8,34 +9,18 @@ import './Contact.css'
 
 
 export default function Contact() {
-    const [toSend, setToSend] = useState({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-      });
-
+    
     function sendEmail(e) {
+
         e.preventDefault();
-        send(
-            'service_gyo7eki',
-            'template_cslpuk6',
-            toSend,
-            'user_Lzduu0l9rvR1CNT93ZOE6'
-          )
-            .then((response) => {
-              console.log('SUCCESS!', response.status, response.text);
-            })
-            .catch((err) => {
-              console.log('FAILED...', err);
-            });
+        emailjs.sendForm('service_on2arcb', 'template_cslpuk6', e.target, 'user_Lzduu0l9rvR1CNT93ZOE6')
+        .then((result) => {
+            console.log(result.text)
+        }, (error) => {
+            console.log(error.text)
+        });
         e.target.reset()
       }
-
-      const handleChange = (e) => {
-        setToSend({ ...toSend, [e.target.name]: e.target.value });
-      };
-
 
     return (
         <Wrapper id="contact">
@@ -47,8 +32,6 @@ export default function Contact() {
                     control={Input}
                     name='name'
                     placeholder='Full name'
-                    value={toSend.name}
-                    onChange={handleChange}
                 
             />
                 <Form.Field
@@ -56,8 +39,6 @@ export default function Contact() {
                     control={Input}
                     name='subject'
                     placeholder='Subject'
-                    value={toSend.subject}
-                    onChange={handleChange}
                
             />
                 <Form.Field
@@ -65,8 +46,6 @@ export default function Contact() {
                     name="email"
                     control={Input}
                     placeholder='joe@schmoe.com'
-                    value={toSend.email}
-                    onChange={handleChange}
                    
                  />
                 <Form.Field
@@ -74,9 +53,6 @@ export default function Contact() {
                     control={TextArea}
                     placeholder='Message'
                     name="message"
-                    value={toSend.message}
-                    onChange={handleChange}
-                    
                 />
                 <Grid>
                     <Grid.Column textAlign="center">
@@ -90,7 +66,7 @@ export default function Contact() {
                         </Button>
                     </Grid.Column>
                  </Grid>
-            </Form>
+            </Form> 
         </Wrapper>
     )
 }
