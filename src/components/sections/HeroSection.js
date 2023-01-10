@@ -6,6 +6,7 @@ import { H1 } from '../styles/TextStyles';
 import { GlobalStyle, lightTheme, darkTheme } from '../styles/GlobalStyle';
 import {Link} from 'react-scroll'
 import HomeButton from '../home/HomeButton';
+import {Button, Icon} from 'semantic-ui-react';
 // import MockUpAnimation from '../animations/MockupAnimation';
 // import WaveBackground from '../backgrounds/WaveBackground';
 
@@ -37,7 +38,13 @@ function HeroSection() {
         <>
        <GlobalStyle/>
       <Wrapper>
-         <button onClick={toggleTheme}>Toggle Theme</button>
+         <Button 
+         onClick={toggleTheme}
+         icon
+         className='button'
+         >
+          {isDarkTheme ? <Icon name='sun'/> : <Icon name='moon'/>}
+         </Button>
         <Link className='link-three' to="contact" smooth={true} duration={1000}>Contact</Link>
         <Link className='link-two' to="project" smooth={true} duration={1000}>Project</Link>
         <Link className='link-one' to="about" smooth={true} duration={1000}>About</Link>
@@ -65,7 +72,6 @@ const Wrapper = styled.div`
   
   height: auto;
   
-  
   .link-three {
     float: right;
     background: linear-gradient(180deg, #730040 0%, #301cbe 100%);
@@ -89,6 +95,12 @@ const Wrapper = styled.div`
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+  }
+
+  .button {
+    position: absolute;
+    left: 10px;
+    top: 10px;
   }
 
 `
